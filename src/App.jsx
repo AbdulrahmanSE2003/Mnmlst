@@ -90,6 +90,7 @@ export default function PortfolioPlaceholder() {
                     <a
                         href="mailto:abdulrahman.saad2303@gmail.com"
                         className="hover:text-[#A70606] transition-colors duration-300"
+                        target="_blank"
                     >
                         <FaEnvelope/>
                     </a>
