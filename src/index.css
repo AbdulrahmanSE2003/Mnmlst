@@ -1,1 +1,62 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@tailwind utilities;
+
+:root {
+    --color-red: #A70606;
+    --color-brown: #754F44;
+    --color-gray: #A9A9A9;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+}
+
+/*
+   ** كلاسات لألوان الخلفية (Background) **
+*/
+.bg-color-red {
+    background-color: var(--color-red);
+}
+
+.bg-color-brown {
+    background-color: var(--color-brown);
+}
+
+.bg-color-gray {
+    background-color: var(--color-gray);
+}
+
+.bg-color-black {
+    background-color: var(--color-black);
+}
+
+.bg-color-white {
+    background-color: var(--color-white);
+}
+
+/*
+   ** كلاسات لألوان النص (Text) **
+*/
+.text-color-red {
+    color: var(--color-red);
+}
+
+.text-color-brown {
+    color: var(--color-brown);
+}
+
+.text-color-gray {
+    color: var(--color-gray);
+}
+
+.text-color-black {
+    color: var(--color-black);
+}
+
+.text-color-white {
+    color: var(--color-white);
+}
+
+body{
+    font-family: "Quicksand", sans-serif;
+}
