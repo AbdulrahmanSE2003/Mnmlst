@@ -1,62 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-    --color-red: #A70606;
-    --color-brown: #754F44;
-    --color-gray: #A9A9A9;
-    --color-black: #000000;
-    --color-white: #FFFFFF;
+@theme {
+  --color-red: #a70606;
+  --color-red-light: #db6a6a;
+  --color-brown: #754f44;
+  --color-gray: #a9a9a9;
+  --color-black: #000000;
+  --color-white: #ffffff;
 }
 
 /*
    ** كلاسات لألوان الخلفية (Background) **
 */
 .bg-color-red {
-    background-color: var(--color-red);
+  background-color: var(--color-red);
 }
 
 .bg-color-brown {
-    background-color: var(--color-brown);
+  background-color: var(--color-brown);
 }
 
 .bg-color-gray {
-    background-color: var(--color-gray);
+  background-color: var(--color-gray);
 }
 
 .bg-color-black {
-    background-color: var(--color-black);
+  background-color: var(--color-black);
 }
 
 .bg-color-white {
-    background-color: var(--color-white);
+  background-color: var(--color-white);
 }
 
 /*
    ** كلاسات لألوان النص (Text) **
 */
 .text-color-red {
-    color: var(--color-red);
+  color: var(--color-red);
 }
 
 .text-color-brown {
-    color: var(--color-brown);
+  color: var(--color-brown);
 }
 
 .text-color-gray {
-    color: var(--color-gray);
+  color: var(--color-gray);
 }
 
 .text-color-black {
-    color: var(--color-black);
+  color: var(--color-black);
 }
 
 .text-color-white {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
-body{
-    font-family: "Quicksand", sans-serif;
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-2xl border border-gray-600 bg-black text-white dark:bg-white dark:text-black shadow-sm  cursor-pointer transition duration-200 flex flex-col items-center justify-center  hover:bg-gray-100 dark:hover:bg-gray-900  hover:text-black dark:hover:text-white;
+  }
+
+    .btn-dark{
+        @apply px-6 py-2 rounded-2xl border border-gray-600 bg-white text-black dark:bg-black dark:text-white shadow-sm  cursor-pointer transition duration-200 flex flex-col items-center justify-center  hover:bg-gray-900 dark:hover:bg-gray-100  hover:text-white dark:hover:text-black
+    }
 }
