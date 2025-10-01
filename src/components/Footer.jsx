@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer
-      className={`absolute bottom-4 left-6 text-sm z-10 transition-colors duration-300 dark:text-gray-400 text-gray-700 `}
+      className={`text-sm z-10 transition-colors duration-300 dark:text-gray-400 text-gray-700 `}
     >
       © {new Date().getFullYear()}{" "}
       <span

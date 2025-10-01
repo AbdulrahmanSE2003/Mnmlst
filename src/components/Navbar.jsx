@@ -7,31 +7,31 @@ const Navbar = ({theme, toggleTheme}) => {
   return (
       <header>
           <nav
-              className={`bg-transparent w-full h-14 flex justify-between items-center p-5 py-2 fixed top-0 left-0 right-0 text-black dark:text-gray-100 z-50`}
+              className={` w-full h-14 flex justify-between items-center p-5 py-2 fixed top-0 left-0 right-0 text-black dark:text-gray-100 z-50 bg-white dark:bg-black transition-colors duration-500`}
           >
               <a href={`#hero`}>Mnmlst.</a>
               <ul className={`flex justify-center items-center gap-4`}>
                   <a
-                      href="#"
-                      className={`opacity-65 hover:opacity-100 transition duration-300`}
+                      href="#hero"
+                      className={`opacity-65 hover:opacity-100 transition duration-300 hidden sm:block`}
                   >
                       <li>Home</li>
                   </a>{" "}
                   <a
-                      href="#"
-                      className={`opacity-65 hover:opacity-100 transition duration-300`}
+                      href="#about"
+                      className={`opacity-65 hover:opacity-100 transition duration-300 hidden sm:block`}
                   >
                       <li>About</li>
                   </a>{" "}
                   <a
                       href="#"
-                      className={`opacity-65 hover:opacity-100 transition duration-300`}
+                      className={`opacity-65 hover:opacity-100 transition duration-300 hidden sm:block`}
                   >
                       <li>Projects</li>
                   </a>{" "}
                   <a
                       href="#"
-                      className={`opacity-65 hover:opacity-100 transition duration-300`}
+                      className={`opacity-65 hover:opacity-100 transition duration-300 hidden sm:block`}
                   >
                       <li>Contact</li>
                   </a>

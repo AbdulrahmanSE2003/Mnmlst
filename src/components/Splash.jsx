@@ -14,7 +14,7 @@ export default function Splash(props) {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7 }}
-            className="text-3xl font-light mb-8"
+            className="text-5xl font-light mb-8"
           >
             Choose your vibe ✦
           </motion.h1>

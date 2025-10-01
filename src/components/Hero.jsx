@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect } from "react";
 import Button from "./Button.jsx";
+import SubtleStars from "./SubtleStars.jsx";
 
 export default function Hero({ start }) {
     useGSAP(() => {
@@ -62,18 +63,6 @@ export default function Hero({ start }) {
 
     }, [start]);
 
-    useEffect(() => {
-        gsap.utils.toArray(".floating-shape").forEach((el, i) => {
-            gsap.to(el, {
-                y: "+=20",
-                rotate: i % 2 === 0 ? 10 : -10,
-                duration: 4 + i,
-                yoyo: true,
-                repeat: -1,
-                ease: "sine.inOut",
-            });
-        });
-    }, []);
 
     return (
         <section
@@ -115,19 +104,19 @@ export default function Hero({ start }) {
             <div className="flex flex-col gap-3 items-start justify-center z-10">
                 <h2
                     id="hero-headline"
-                    className="capitalize font-bold text-6xl opacity-0 translate-y-6"
+                    className="capitalize font-bold text-2xl sm:text-4xl lg:text-6xl opacity-0 translate-y-6"
                 >
                     Hi, I<span className="text-red-light">'m</span> Abdulrahman Saad <span className={`hero-star opacity-0 scale-50`}>✦</span>
                 </h2>
                 <h5
                     id="sub-heading"
-                    className="font-semibold text-4xl opacity-0 translate-y-6"
+                    className="font-semibold text-xl sm:text-2xl lg:text-4xl opacity-0 translate-y-6"
                 >
                     Front-end Developer.
                 </h5>
                 <p
                     id="hero-desc"
-                    className="capitalize font-normal opacity-0 translate-y-6"
+                    className="capitalize text-[0.77rem] sm:text-[1rem] font-normal opacity-0 translate-y-6"
                 >
                     Building Minimalist ✦ Creative ✦ Interactive Experiences
                 </p>
@@ -146,17 +135,7 @@ export default function Hero({ start }) {
                 </div>
 
                 {/* Subtle Floating Shapes */}
-                <>
-          <span className="floating-shape absolute top-20 left-10 text-3xl text-red dark:text-red-300 opacity-30">
-            ✦
-          </span>
-                    <span className="floating-shape absolute bottom-32 right-20 text-3xl text-red dark:text-red-300 opacity-30">
-            ●
-          </span>
-                    <span className="floating-shape absolute top-2/3 left-6 text-3xl text-red dark:text-red-300 opacity-30">
-            ✦
-          </span>
-                </>
+                <SubtleStars pos1={`top-20 left-10`} pos2={`bottom-32 right-20`} pos3={`top-2/3 left-6`}/>
             </div>
         </section>
     );

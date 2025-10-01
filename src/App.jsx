@@ -4,11 +4,13 @@ import Splash from "./components/Splash.jsx";
 import Hero from "./components/Hero.jsx";
 import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
+import About from "./components/About.jsx";
+import Dev from "./components/Dev.jsx";
 
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
-  const [startAnimation, setStartAnimation] = useState(false);
+  const [startAnimation, setStartAnimation] = useState(true);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -54,6 +56,8 @@ export default function App() {
       />
 
       <Hero onClick={toggleTheme} theme={theme} start={startAnimation} />
+      <About theme={theme}/>
+        <Dev/>
 
       {/* Footer */}
       <Footer />
