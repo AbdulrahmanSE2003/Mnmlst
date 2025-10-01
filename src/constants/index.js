@@ -1,7 +1,4 @@
-import lightLogo from "../assets/logo-white-circle.png"
-import darkLogo from "../assets/logo-dark-circle.png"
+import lightLogo from "../assets/logo-white-circle.png";
+import darkLogo from "../assets/logo-dark-circle.png";
 
-
-export{
-    darkLogo, lightLogo
-}
+export { darkLogo, lightLogo };

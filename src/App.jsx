@@ -6,6 +6,7 @@ import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
 import About from "./components/About.jsx";
 import Dev from "./components/Dev.jsx";
+import Skills from "./components/Skills.jsx";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(false);
@@ -47,7 +48,7 @@ export default function App() {
   }
   return (
     <>
-      <Navbar theme={theme} toggleTheme={toggleTheme}/>
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       <Splash
         showSplash={showSplash}
@@ -56,8 +57,9 @@ export default function App() {
       />
 
       <Hero onClick={toggleTheme} theme={theme} start={startAnimation} />
-      <About theme={theme}/>
-        <Dev/>
+      <About theme={theme} />
+      <Dev>Creative.</Dev>
+      <Skills />
 
       {/* Footer */}
       <Footer />
