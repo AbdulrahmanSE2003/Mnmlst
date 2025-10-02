@@ -59,10 +59,11 @@ export default function App() {
 
       <Hero onClick={toggleTheme} theme={theme} start={startAnimation} />
       <About theme={theme} />
-      <Dev dir={'left'}>Creative.</Dev>
-      <Skills />
+      <Dev dir={"left"}>Creative.</Dev>
+      <Skills theme={theme}/>
       <Dev>Minimal.</Dev>
-        <Projects />
+      <Projects />
+      <Dev dir={"left"}>Innovative.</Dev>
 
       {/* Footer */}
       <Footer />

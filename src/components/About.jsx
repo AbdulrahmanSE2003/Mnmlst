@@ -8,10 +8,10 @@ import { darkLogo, lightLogo } from "../constants/index.js";
 import SubtleStars from "./SubtleStars.jsx";
 import SectionHeading from "./SectionHeading.jsx";
 import SubHeading from "./SubHeading.jsx";
+import Button from "./Button.jsx";
 
 const About = ({ theme }) => {
   useGSAP(() => {
-
     gsap.to(".about-para", {
       opacity: 1,
       y: 0,
@@ -60,7 +60,7 @@ const About = ({ theme }) => {
   return (
     <section id={`about`} className="">
       <SectionHeading>About.</SectionHeading>
-        <SubHeading>Who am i?</SubHeading>
+      <SubHeading>Who am i?</SubHeading>
       <div className={`flex justify-between items-center gap-5 mb-6`}>
         <div
           className={`p-8 w-full hidden lg:flex justify-center items-center`}
@@ -103,6 +103,16 @@ const About = ({ theme }) => {
           <span className="text-red-light capitalize font-semibold">life</span>{" "}
           <span className="text-red-light">✦</span>
         </p>
+      </div>
+
+      <div className={`flex justify-center items-center`}>
+        <Button
+          className={`w-fit text-center`}
+          href={`https://drive.google.com/uc?export=download&id=1LPExTzWBFhQGAS5cBXPJVdvkaxfNXPeK`}
+          target={"_parent"}
+        >
+          Download CV
+        </Button>
       </div>
 
       <SubtleStars

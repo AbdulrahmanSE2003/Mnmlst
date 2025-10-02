@@ -1,10 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Button = ({ className, px, py, children, onClick, href }) => {
-  const Tag = href ? "a" : "button";
-
-  const MotionTag = `motion.${Tag}`;
+const Button = ({ className, px, py, children, onClick, href, target }) => {
+  const isInternal = href && href.startsWith("#");
 
   if (href) {
     return (
@@ -13,6 +11,9 @@ const Button = ({ className, px, py, children, onClick, href }) => {
         whileTap={{ scale: 0.95 }}
         onClick={onClick}
         className={`btn ${className || ""} ${px || ""} ${py || ""}`}
+        href={href}
+        {...(!isInternal && { target: "_blank", rel: "noopener noreferrer" })}
+          target={target || "_blank"}
       >
         {children}
       </motion.a>

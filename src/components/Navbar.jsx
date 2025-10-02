@@ -24,7 +24,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <li>About</li>
           </a>{" "}
           <a
-            href="#"
+            href="#projects"
             className={`opacity-65 hover:opacity-100 transition duration-300 hidden sm:block`}
           >
             <li>Projects</li>
