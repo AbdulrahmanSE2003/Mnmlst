@@ -6,30 +6,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 import { darkLogo, lightLogo } from "../constants/index.js";
 import SubtleStars from "./SubtleStars.jsx";
+import SectionHeading from "./SectionHeading.jsx";
+import SubHeading from "./SubHeading.jsx";
 
 const About = ({ theme }) => {
   useGSAP(() => {
-    gsap.to(".section-heading", {
-      y: 0,
-      opacity: 1,
-      duration: 0.4,
-      ease: "power3.inOut",
-      scrollTrigger: {
-        trigger: ".section-heading",
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
-    });gsap.to(".sub-heading", {
-      y: 0,
-      opacity: 1,
-      duration: 0.4,
-      ease: "power3.inOut",
-      scrollTrigger: {
-        trigger: ".sub-heading",
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
-    });
 
     gsap.to(".about-para", {
       opacity: 1,
@@ -78,8 +59,8 @@ const About = ({ theme }) => {
 
   return (
     <section id={`about`} className="">
-      <h2 className={`section-heading `}>About.</h2>
-        <h4 className={`sub-heading`}>who am i?</h4>
+      <SectionHeading>About.</SectionHeading>
+        <SubHeading>Who am i?</SubHeading>
       <div className={`flex justify-between items-center gap-5 mb-6`}>
         <div
           className={`p-8 w-full hidden lg:flex justify-center items-center`}

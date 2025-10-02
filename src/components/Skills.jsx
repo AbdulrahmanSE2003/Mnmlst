@@ -8,6 +8,8 @@ import { RiJavascriptFill, RiTailwindCssFill  } from "react-icons/ri";
 import { LuFramer } from "react-icons/lu";
 import { SiVite } from "react-icons/si";
 import SkillItem from "./SkillItem.jsx";
+import SectionHeading from "./SectionHeading.jsx";
+import SubHeading from "./SubHeading.jsx";
 
 
 
@@ -46,29 +48,6 @@ const skills = [
 ]
 const Skills = () => {
   useGSAP(() => {
-    gsap.to('.section-heading', {
-        opacity:1,
-        y:0,
-        duration: 0.65,
-        ease: 'power3.inOut',
-        scrollTrigger:{
-            trigger:'.head-parent',
-            start: 'top 100%',
-            toggleActions: 'play none none reverse'
-        }
-    })
-      gsap.to(".sub-heading", {
-          y: 0,
-          opacity: 1,
-          duration: 0.65,
-          delay: 0.25,
-          ease: "power3.inOut",
-          scrollTrigger: {
-              trigger: ".skill-parent",
-              start: "top 85%",
-              toggleActions: "play none none reverse",
-          },
-      });
 
       gsap.to('.skill', {
           y:0,
@@ -84,8 +63,8 @@ const Skills = () => {
   }, []);
   return (
     <section id={`skills`} className={`px-14`}>
-      <div className={`head-parent`}><h2 className={`section-heading`}>Skills.</h2></div>
-        <div className={`skill-parent`}><h4 className={`sub-heading`}>what i do?</h4></div>
+      <SectionHeading>Skills.</SectionHeading>
+        <SubHeading>What i do?</SubHeading>
         <ul className={`grid grid-cols-5 gap-6 my-8 skills`}>
             {skills.map(skill => (
                 <SkillItem key={skill.title} title={skill.title}>
