@@ -8,6 +8,7 @@ import About from "./components/About.jsx";
 import Dev from "./components/Dev.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
+import Stats from "./components/Stats.jsx";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(false);
@@ -64,6 +65,7 @@ export default function App() {
       <Dev>Minimal.</Dev>
       <Projects />
       <Dev dir={"left"}>Innovative.</Dev>
+        <Stats/>
 
       {/* Footer */}
       <Footer />

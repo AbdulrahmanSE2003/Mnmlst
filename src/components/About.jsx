@@ -60,7 +60,7 @@ const About = ({ theme }) => {
   return (
     <section id={`about`} className="">
       <SectionHeading>About.</SectionHeading>
-      <SubHeading>Who am i?</SubHeading>
+      <SubHeading>Some information about my human side.</SubHeading>
       <div className={`flex justify-between items-center gap-5 mb-6`}>
         <div
           className={`p-8 w-full hidden lg:flex justify-center items-center`}
@@ -117,7 +117,7 @@ const About = ({ theme }) => {
 
       <SubtleStars
         pos1={`right-10 top-16`}
-        pos2={`left-20 top-1/3`}
+        pos2={`left-20 top-2/3`}
         pos3={`right-28 bottom-28`}
       />
     </section>

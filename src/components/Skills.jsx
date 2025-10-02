@@ -128,7 +128,7 @@ const Skills = () => {
   return (
     <section id={`skills`} className={`px-14`}>
       <SectionHeading>Skills.</SectionHeading>
-      <SubHeading>What i do?</SubHeading>
+      <SubHeading>What makes my code come Alive.</SubHeading>
       <ul className={`grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 my-8 skills`}>
         {skills.map((skill) => (
           <SkillItem key={skill.title} title={skill.title}>
