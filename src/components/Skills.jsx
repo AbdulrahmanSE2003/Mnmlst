@@ -3,7 +3,6 @@ import SkillItem from "./SkillItem.jsx";
 import SectionHeading from "./SectionHeading.jsx";
 import SubHeading from "./SubHeading.jsx";
 
-
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -25,7 +24,13 @@ import {
   RiNextjsFill,
 } from "react-icons/ri";
 import { LuFramer } from "react-icons/lu";
-import { SiVite, SiObsidian, SiRedux, SiNetlify, SiAxios   } from "react-icons/si";
+import {
+  SiVite,
+  SiObsidian,
+  SiRedux,
+  SiNetlify,
+  SiAxios,
+} from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { VscVscode } from "react-icons/vsc";
 
@@ -76,7 +81,7 @@ const skills = [
   },
   {
     title: "Axios",
-    ele: SiAxios ,
+    ele: SiAxios,
   },
   {
     title: "Figma",
@@ -99,8 +104,8 @@ const skills = [
     ele: FaGithub,
   },
   {
-      title: "Netlify",
-      ele: SiNetlify,
+    title: "Netlify",
+    ele: SiNetlify,
   },
   {
     title: "Notion",
@@ -129,7 +134,9 @@ const Skills = () => {
     <section id={`skills`} className={`px-14`}>
       <SectionHeading>Skills.</SectionHeading>
       <SubHeading>What makes my code come Alive.</SubHeading>
-      <ul className={`grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 my-8 skills`}>
+      <ul
+        className={`grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 my-8 skills`}
+      >
         {skills.map((skill) => (
           <SkillItem key={skill.title} title={skill.title}>
             <skill.ele className="text-5xl text-red dark:text-red-light skill opacity-0 -translate-y-5  dark:group-hover:text-red transition-colors duration-300" />

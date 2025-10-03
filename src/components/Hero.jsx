@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Button from "./Button.jsx";
 import SubtleStars from "./SubtleStars.jsx";
 
@@ -121,8 +121,12 @@ export default function Hero({ start }) {
           <Button href="#projects" className="hero-btn opacity-0 ">
             View Projects
           </Button>
-          <Button href="contact" className="hero-btn opacity-0 btn-dark">
-            Contact
+          <Button
+            className={`btn-dark w-fit text-center`}
+            href={`https://drive.google.com/uc?export=download&id=1LPExTzWBFhQGAS5cBXPJVdvkaxfNXPeK`}
+            target={"_parent"}
+          >
+            Download CV
           </Button>
         </div>
 

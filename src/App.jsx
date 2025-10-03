@@ -9,6 +9,7 @@ import Dev from "./components/Dev.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Stats from "./components/Stats.jsx";
+import Testimonials from "./components/Testimonials.jsx";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(false);
@@ -61,11 +62,13 @@ export default function App() {
       <Hero onClick={toggleTheme} theme={theme} start={startAnimation} />
       <About theme={theme} />
       <Dev dir={"left"}>Creative.</Dev>
-      <Skills theme={theme}/>
+      <Skills theme={theme} />
       <Dev>Minimal.</Dev>
       <Projects />
       <Dev dir={"left"}>Innovative.</Dev>
-        <Stats/>
+      <Stats />
+      <Dev>Sleek.</Dev>
+      <Testimonials />
 
       {/* Footer */}
       <Footer />

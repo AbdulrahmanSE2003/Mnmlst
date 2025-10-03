@@ -13,7 +13,6 @@ const Button = ({ className, px, py, children, onClick, href, target }) => {
         className={`btn ${className || ""} ${px || ""} ${py || ""}`}
         href={href}
         {...(!isInternal && { target: "_blank", rel: "noopener noreferrer" })}
-          target={target || "_blank"}
       >
         {children}
       </motion.a>
