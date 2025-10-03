@@ -2,10 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading.jsx";
 import SubHeading from "./SubHeading.jsx";
+import SubtleStars from "./SubtleStars.jsx";
 
 const stats = [
   { number: "+30", label: "Projects Done" },
-  { number: (new Date().getFullYear() + 2) % 2025, label: "Years of Coding" },
+  { number: `+${(new Date().getFullYear() + 2) % 2025}`, label: "Years of Coding" },
   { number: "5", label: "Happy Clients" },
   { number: "∞", label: "Ideas Brewing" },
 ];
@@ -54,6 +55,12 @@ export default function Stats() {
           ))}
         </motion.div>
       </div>
+
+        <SubtleStars
+            pos1={`right-10 top-16`}
+            pos2={`left-8 top-1/6`}
+            pos3={`right-20 bottom-16`}
+        />
     </section>
   );
 }

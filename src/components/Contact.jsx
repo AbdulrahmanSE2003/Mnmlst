@@ -42,7 +42,7 @@ const Contact = ({ setShowBot, showBot }) => {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.5 }}
                     transition={{ duration: 0.35 }}
-                    className={`fixed right-8 bottom-5 z-40 h-[70vh] border-2 border-red-dev rounded-xl w-80`}
+                    className={`absolute sm:fixed bottom-0 left-0 sm:left-auto sm:right-8 sm:bottom-5 z-[60] h-[90vh] sm:h-[85vh] lg:h-[70vh] border-2 border-red-dev rounded-t-xl sm:rounded-xl w-full sm:w-80`}
                 >
                     <div className={`flex flex-col h-full`}>
                         {/* Header */}
@@ -80,7 +80,7 @@ const Contact = ({ setShowBot, showBot }) => {
                                 I'm Mnmlst Bot. I'm Ready to help you with any questions you might have about my work.
                             </Message>
                             <Message className={`msg opacity-0 translate-y-5`}>How can i help you ?</Message>
-                            <BotChoices className={`msg opacity-0 translate-y-5`} />
+                            <BotChoices className={`msg opacity-0 translate-y-5 flex flex-col gap-1`} />
                         </div>
                     </div>
                 </motion.div>

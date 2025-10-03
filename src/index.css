@@ -42,6 +42,7 @@ body {
   .sub-heading {
     @apply text-gray-400 font-balo font-medium text-xl -tracking-tighter text-center opacity-0 translate-y-20;
   }
+
 }
 
 ::-webkit-scrollbar-track {
@@ -80,4 +81,6 @@ body {
         background-position: 200% center;
     }
 }
+
+
 

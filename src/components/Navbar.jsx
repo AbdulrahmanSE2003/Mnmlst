@@ -33,6 +33,11 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
             className="opacity-65 hover:opacity-100 transition duration-300"
           >
             <li>About</li>
+          </a><a
+            href="#skills"
+            className="opacity-65 hover:opacity-100 transition duration-300"
+          >
+            <li>Skills</li>
           </a>
           <a
             href="#projects"
@@ -89,13 +94,19 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
                 className="hover:opacity-100 opacity-70 transition"
               >
                 Home
-              </a>
-              <a
+              </a><a
                 href="#about"
                 onClick={() => setIsOpen(false)}
                 className="hover:opacity-100 opacity-70 transition"
               >
                 About
+              </a>
+              <a
+                href="#skills"
+                onClick={() => setIsOpen(false)}
+                className="hover:opacity-100 opacity-70 transition"
+              >
+                Skills
               </a>
               <a
                 href="#projects"
@@ -104,13 +115,12 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
               >
                 Projects
               </a>
-              <a
-                href="#contact"
-                onClick={() => setIsOpen(false)}
+              <button
+                  onClick={() => setShowBot(prev => !prev)}
                 className="hover:opacity-100 opacity-70 transition"
               >
                 Contact
-              </a>
+              </button>
             </motion.div>
           )}
         </AnimatePresence>

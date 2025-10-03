@@ -113,7 +113,7 @@ export default function Hero({ start }) {
           id="hero-desc"
           className="capitalize text-[0.77rem] sm:text-[1rem] font-normal opacity-0 translate-y-6"
         >
-          Building Minimalist ✦ Creative ✦ Interactive Experiences
+          Building Minimalist ✦ Creative ✦ Interactive Experiences.
         </p>
 
         {/* Hero Buttons */}

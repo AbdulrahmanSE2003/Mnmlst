@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-black text-black dark:text-white py-12 px-6 flex  items-center justify-between gap-6">
+    <footer className="bg-white dark:bg-black text-black dark:text-white py-12 px-6 flex max-sm:flex-col max-sm:items-start  items-center justify-between gap-6">
       {/* Brand / Logo */}
       <a href={`#hero`} className="text-2xl font-bold">
         Mnmlst.
@@ -16,7 +16,7 @@ export default function Footer() {
 
       <div className="flex flex-col gap-5">
         {/* Socials */}
-        <div className={`flex gap-6 text-2xl justify-end`}>
+        <div className={`flex gap-6 text-2xl justify-start sm:justify-end`}>
           <a
             href="https://github.com/AbdulrahmanSE2003"
             target="_blank"
