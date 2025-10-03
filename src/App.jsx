@@ -10,11 +10,13 @@ import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Stats from "./components/Stats.jsx";
 import Testimonials from "./components/Testimonials.jsx";
+import Contact from "./components/Contact.jsx";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
   const [startAnimation, setStartAnimation] = useState(true);
+    const [showBot, setShowBot] = useState(false)
 
   useEffect(() => {
     if (theme === "dark") {
@@ -51,7 +53,7 @@ export default function App() {
   }
   return (
     <>
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Navbar theme={theme} toggleTheme={toggleTheme} setShowBot={setShowBot}/>
 
       <Splash
         showSplash={showSplash}
@@ -69,6 +71,9 @@ export default function App() {
       <Stats />
       <Dev>Sleek.</Dev>
       <Testimonials />
+
+        {/*Absolute contact component*/}
+        {showBot && <Contact setShowBot={setShowBot} showBot={showBot}/>}
 
       {/* Footer */}
       <Footer />

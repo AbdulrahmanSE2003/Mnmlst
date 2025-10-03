@@ -122,9 +122,9 @@ export default function Hero({ start }) {
             View Projects
           </Button>
           <Button
-            className={`btn-dark w-fit text-center`}
+            className={`btn-dark w-fit hero-btn text-center opacity-0`}
             href={`https://drive.google.com/uc?export=download&id=1LPExTzWBFhQGAS5cBXPJVdvkaxfNXPeK`}
-            target={"_parent"}
+            // target={"_parent"}
           >
             Download CV
           </Button>

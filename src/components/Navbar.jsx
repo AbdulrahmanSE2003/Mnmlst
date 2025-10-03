@@ -3,9 +3,13 @@ import { FaMoon } from "react-icons/fa";
 import { Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import {useGSAP} from "@gsap/react";
+import gsap from "gsap";
 
-const Navbar = ({ theme, toggleTheme }) => {
+const Navbar = ({ theme, toggleTheme, setShowBot }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+
 
   return (
     <header>
@@ -36,12 +40,13 @@ const Navbar = ({ theme, toggleTheme }) => {
           >
             <li>Projects</li>
           </a>
-          <a
+          <button
+              onClick={() => setShowBot(prev => !prev)}
             href="#contact"
-            className="opacity-65 hover:opacity-100 transition duration-300"
+            className="opacity-65 hover:opacity-100 transition duration-300 cursor-pointer contact-tab"
           >
             <li>Contact</li>
-          </a>
+          </button>
 
           {/* Theme Toggle */}
           <button
