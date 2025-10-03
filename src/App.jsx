@@ -13,9 +13,9 @@ import Testimonials from "./components/Testimonials.jsx";
 import Contact from "./components/Contact.jsx";
 
 export default function App() {
-  const [showSplash, setShowSplash] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
-  const [startAnimation, setStartAnimation] = useState(true);
+  const [startAnimation, setStartAnimation] = useState(false);
     const [showBot, setShowBot] = useState(false)
 
   useEffect(() => {
