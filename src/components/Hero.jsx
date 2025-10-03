@@ -123,10 +123,10 @@ export default function Hero({ start }) {
           </Button>
           <Button
             className={`btn-dark w-fit hero-btn text-center opacity-0`}
-            href={`https://drive.google.com/uc?export=download&id=1LPExTzWBFhQGAS5cBXPJVdvkaxfNXPeK`}
+            href={`https://wa.me/201116678912`}
             // target={"_parent"}
           >
-            Download CV
+            Get in Touch
           </Button>
         </div>
 

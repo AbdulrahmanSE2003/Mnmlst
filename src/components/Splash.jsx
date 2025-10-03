@@ -1,4 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
+import SubtleStars from "./SubtleStars.jsx";
+import React from "react";
 
 export default function Splash(props) {
   return (
@@ -14,12 +16,22 @@ export default function Splash(props) {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7 }}
-            className="text-5xl font-light mb-8"
+            className="text-5xl font-light mb-2"
           >
             Choose your vibe ✦
           </motion.h1>
 
-          <div className="flex gap-6">
+            <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.7 }}
+                className="text-gray-500 dark:text-gray-400 text-lg my-4"
+            >
+                Make it minimal. Make it yours.
+            </motion.p>
+
+
+            <div className="flex gap-6">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -37,7 +49,15 @@ export default function Splash(props) {
             >
               Dark
             </motion.button>
+
           </div>
+
+            {/* Subtle Floating Shapes */}
+            <SubtleStars
+                pos1={`top-20 left-10`}
+                pos2={`bottom-32 right-20`}
+                pos3={`top-2/3 left-6`}
+            />
         </motion.section>
       )}
     </AnimatePresence>

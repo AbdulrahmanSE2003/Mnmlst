@@ -98,10 +98,10 @@ const About = ({ theme }) => {
                         src={theme === "dark" ? darkLogo : lightLogo}
                     />
                     <img
-                        className="about-img second absolute opacity-0 rounded-full aspect-auto"
+                        className={`about-img second absolute opacity-0 rounded-full aspect-auto ${theme === "dark" ? "brightness-150" : "brightness-110"} `}
                         width={375}
                         height={375}
-                        alt="logo2"
+                        alt="creator"
                         src={abdo}
                     />
                 </div>
