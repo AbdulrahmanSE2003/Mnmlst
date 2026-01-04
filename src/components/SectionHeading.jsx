@@ -14,7 +14,7 @@ const SectionHeading = ({ children }) => {
       ease: "power3.inOut",
       scrollTrigger: {
         trigger: h2ref.current,
-        start: "top 85%",
+        start: "top 75%",
         toggleActions: "play none none reverse",
       },
     });

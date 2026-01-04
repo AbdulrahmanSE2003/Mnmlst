@@ -45,13 +45,13 @@ const Projects = () => {
     gsap.to(".project-card", {
       y: 0,
       opacity: 1,
-      duration: 0.8,
+      duration: 0.4,
       delay: 0.2,
       ease: "power3.InOut",
-      stagger: 0.55, // يوزع الزمن تلقائيًا
+      stagger: 0.2,
       scrollTrigger: {
-        trigger: "#projects", // خلي التريجر للقسم كله
-        start: "top 95%",
+        trigger: "#projects",
+        start: "top 30%",
         toggleActions: "play none none reverse",
       },
     });
@@ -64,7 +64,7 @@ const Projects = () => {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
         {projectsData.map((p, i) => (
-          <div key={i} className="opacity-0 translate-y-5 project-card">
+          <div key={i} className="opacity-0 translate-y-12 project-card">
             <ProjectCard {...p} />
           </div>
         ))}

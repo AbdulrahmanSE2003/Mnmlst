@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Dev = ({ children, triggerStart = "top 85%", dir }) => {
+const Dev = ({ children, triggerStart = "top 75%", dir }) => {
   const sectionRef = useRef(null);
 
   useGSAP(() => {

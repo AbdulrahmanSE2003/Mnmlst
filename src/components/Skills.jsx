@@ -122,10 +122,10 @@ const Skills = () => {
       y: 0,
       opacity: 1,
       duration: 0.4,
-      stagger: 0.1,
+      stagger: 0.115,
       scrollTrigger: {
         trigger: ".skills",
-        start: "top 85%",
+        start: "top 65%",
         toggleActions: "play none none none",
       },
     });

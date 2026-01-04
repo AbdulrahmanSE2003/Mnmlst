@@ -5,12 +5,12 @@ import SubHeading from "./SubHeading.jsx";
 import SubtleStars from "./SubtleStars.jsx";
 
 const stats = [
-  { number: "+30", label: "Projects Done" },
+  { number: "+45", label: "Projects Done" },
   {
     number: `+${(new Date().getFullYear() + 2) % 2025}`,
     label: "Years of Coding",
   },
-  { number: "5", label: "Happy Clients" },
+  { number: "8", label: "Happy Clients" },
   { number: "∞", label: "Ideas Brewing" },
 ];
 

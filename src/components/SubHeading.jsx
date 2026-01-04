@@ -16,7 +16,7 @@ const SubHeading = ({ children }) => {
       ease: "power3.inOut",
       scrollTrigger: {
         trigger: subRef.current,
-        start: "top 85%",
+        start: "top 70%",
         toggleActions: "play none none reverse",
       },
     });

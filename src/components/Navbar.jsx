@@ -117,7 +117,7 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
               </a>
               <button
                 onClick={() => setShowBot((prev) => !prev)}
-                className="hover:opacity-100 opacity-70 transition"
+                className="hover:opacity-100 opacity-70 transition cursor-pointer"
               >
                 Contact
               </button>
