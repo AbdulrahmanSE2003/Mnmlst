@@ -62,14 +62,14 @@ const About = () => {
         <section ref={container} id="about" className="py-20 px-5 sm:px-14">
             {/* Header */}
 
-            <SectionHeading>About.</SectionHeading>
+            <SectionHeading>About</SectionHeading>
             <SubHeading>Some information about my human side.</SubHeading>
 
             <div className="grid lg:grid-cols-2 gap-16 items-start mt-10 ">
 
                 {/* Left Side: Image Experience */}
                 <div className="img-card group relative overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 p-2 max-w-lg">
-                    <div className="aspect-square overflow-hidden rounded-xl flex flex-col justify-center">
+                    <div className="aspect-auto overflow-hidden rounded-xl flex flex-col justify-center">
                         <img
                             src={abdo}
                             alt="Abdulrahman"
@@ -120,7 +120,7 @@ const About = () => {
                     </div>
 
                     <div className="reveal-text pt-6">
-                        <Button className={`w-fit text-center hover-target`} href="https://drive.google.com/uc?export=download&id=1LPExTzWBFhQGAS5cBXPJVdvkaxfNXPeK" >
+                        <Button className={`w-fit text-center hover-target py-2`} href="https://drive.google.com/uc?export=download&id=1LPExTzWBFhQGAS5cBXPJVdvkaxfNXPeK" >
                             Download CV
                         </Button>
                     </div>

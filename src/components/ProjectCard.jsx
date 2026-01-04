@@ -1,73 +1,54 @@
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-const ProjectCard = ({
-  title,
-  description,
-  image,
-  demoLink,
-  githubLink,
-  tech,
-  project,
-}) => {
-  return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col group hover:-translate-y-[6px]">
-      {/* صورة البروجكت */}
-      <div className="h-48 w-full overflow-hidden">
-        <img
-          src={image}
-          alt={title}
-          className="w-full brightness-90 dark:brightness-[80%] h-full object-cover hover:scale-105 transition-transform duration-500"
-        />
-      </div>
+const ProjectCard = ({ title, category, description, image, demoLink, githubLink, tech }) => {
+    return (
+        <div className="group relative flex flex-col h-full bg-transparent">
+            {/* Image Container */}
+            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 border border-zinc-200 transition-all duration-500 ">
+                <img
+                    src={image}
+                    alt={title}
+                    className="w-full h-full object-cover transition-all duration-700 ease-in-out  g group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                />
 
-      {/* التفاصيل */}
-      <div className="flex-1 flex flex-col p-5">
-        <h3 className="text-xl font-semibold mb-2 dark:text-white  group-hover:text-red-light dark:group-hover:text-red-dev transition-colors duration-300">
-          {title}
-        </h3>
-        <p className="text-gray-600 dark:text-gray-300 text-sm flex-1 min-h-10 max-h-10 overflow-hidden">
-          {description}
-        </p>
+                {/* Hover Overlay with Links */}
+                <div className="absolute inset-0 bg-black/40 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-4">
+                    <a href={githubLink} target="_blank" rel="noreferrer" className="p-3 bg-white text-black rounded-full hover:bg-red-light hover:text-white transition-colors">
+                        <FaGithub size={20} />
+                    </a>
+                    <a href={demoLink} target="_blank" rel="noreferrer" className="p-3 bg-white text-black rounded-full hover:bg-red-light hover:text-white transition-colors">
+                        <FaExternalLinkAlt size={18} />
+                    </a>
+                </div>
+            </div>
 
-        {/* Tech Stack */}
-        <div className="mt-3 flex flex-wrap gap-2">
-          {tech.map((t, i) => (
-            <span
-              key={i}
-              className="bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors duration-300 text-gray-700 dark:text-gray-300 text-xs px-2 py-1 rounded-lg"
-            >
-              {t}
-            </span>
-          ))}
+            {/* Content */}
+            <div className="mt-6 flex flex-col flex-grow">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-red-light font-bold mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    {category}
+                </span>
+                <h3 className="text-2xl font-bold mb-3 dark:text-white group-hover:text-red-light transition-colors">
+                    {title}
+                </h3>
+                <p className="text-gray-500 dark:text-zinc-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                    {description}
+                </p>
+
+                {/* Tech Tags - Minimalist & Unified */}
+                <div className="mt-auto flex flex-wrap gap-2">
+                    {tech.map((item) => (
+                        <span
+                            key={item}
+                            className="text-[10px] px-2 py-1 rounded-md border border-gray-200 dark:border-zinc-800 text-gray-800 dark:text-gray-300 font-medium group-hover:text-gray-600 dark:group-hover:text-zinc-200 transition-colors cursor-default hover:bg-gray-500/10 dark:hover:bg-gray-100/10 transition-colors duration-300"
+                        >
+                            {item}
+                        </span>
+                    ))}
+                </div>
+            </div>
         </div>
-
-        {/* أزرار */}
-        <div className="mt-4 flex gap-3">
-          {demoLink && (
-            <a
-              href={demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-colors text-sm"
-            >
-              <ExternalLink size={16} /> Demo
-            </a>
-          )}
-          {githubLink && (
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm"
-            >
-              <Github size={16} /> Code
-            </a>
-          )}
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default ProjectCard;

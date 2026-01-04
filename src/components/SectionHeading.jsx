@@ -21,7 +21,7 @@ const SectionHeading = ({ children }) => {
   }, []);
   return (
     <h2 ref={h2ref} className="section-heading">
-      {children}
+      {children}<span className={`text-red-light`}>.</span>
     </h2>
   );
 };

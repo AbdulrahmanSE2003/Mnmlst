@@ -44,7 +44,7 @@ export default function Testimonials() {
     return (
         <section id="testimonials" className="py-20 overflow-hidden">
             <div className="container mx-auto px-6">
-                <SectionHeading>Testimonials.</SectionHeading>
+                <SectionHeading>Testimonials</SectionHeading>
                 <SubHeading>Kind words from great collaborators.</SubHeading>
 
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10">
