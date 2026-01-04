@@ -11,12 +11,13 @@ import Projects from "./components/Projects.jsx";
 import Stats from "./components/Stats.jsx";
 import Testimonials from "./components/Testimonials.jsx";
 import Contact from "./components/Contact.jsx";
+import CustomCursor from "./components/CustomCursor.jsx";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
   const [startAnimation, setStartAnimation] = useState(false);
-    const [showBot, setShowBot] = useState(false)
+  const [showBot, setShowBot] = useState(false);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -53,7 +54,8 @@ export default function App() {
   }
   return (
     <>
-      <Navbar theme={theme} toggleTheme={toggleTheme} setShowBot={setShowBot}/>
+        <CustomCursor />
+      <Navbar theme={theme} toggleTheme={toggleTheme} setShowBot={setShowBot} />
 
       <Splash
         showSplash={showSplash}
@@ -72,8 +74,8 @@ export default function App() {
       <Dev>Sleek.</Dev>
       <Testimonials />
 
-        {/*Absolute contact component*/}
-        {showBot && <Contact setShowBot={setShowBot} showBot={showBot}/>}
+      {/*Absolute contact component*/}
+      {showBot && <Contact setShowBot={setShowBot} showBot={showBot} />}
 
       {/* Footer */}
       <Footer />

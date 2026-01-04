@@ -3,13 +3,11 @@ import { FaMoon } from "react-icons/fa";
 import { Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import {useGSAP} from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Navbar = ({ theme, toggleTheme, setShowBot }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-
 
   return (
     <header>
@@ -33,7 +31,8 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
             className="opacity-65 hover:opacity-100 transition duration-300"
           >
             <li>About</li>
-          </a><a
+          </a>
+          <a
             href="#skills"
             className="opacity-65 hover:opacity-100 transition duration-300"
           >
@@ -46,9 +45,9 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
             <li>Projects</li>
           </a>
           <button
-              onClick={() => setShowBot(prev => !prev)}
+            onClick={() => setShowBot((prev) => !prev)}
             href="#contact"
-            className="opacity-65 hover:opacity-100 transition duration-300 cursor-pointer contact-tab"
+            className="opacity-90 hover:opacity-100 font-semibold transition duration-300 cursor-pointer contact-tab"
           >
             <li>Contact</li>
           </button>
@@ -94,7 +93,8 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
                 className="hover:opacity-100 opacity-70 transition"
               >
                 Home
-              </a><a
+              </a>
+              <a
                 href="#about"
                 onClick={() => setIsOpen(false)}
                 className="hover:opacity-100 opacity-70 transition"
@@ -116,7 +116,7 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
                 Projects
               </a>
               <button
-                  onClick={() => setShowBot(prev => !prev)}
+                onClick={() => setShowBot((prev) => !prev)}
                 className="hover:opacity-100 opacity-70 transition"
               >
                 Contact

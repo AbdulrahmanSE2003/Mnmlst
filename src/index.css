@@ -21,8 +21,8 @@ html {
 body {
   font-family: "Quicksand", sans-serif;
 }
-::selection{
-    background-color: var(--color-red-dev);
+::selection {
+  background-color: var(--color-red-dev);
 }
 
 @layer components {
@@ -42,7 +42,6 @@ body {
   .sub-heading {
     @apply text-gray-400 font-balo font-medium text-xl -tracking-tighter text-center opacity-0 translate-y-20;
   }
-
 }
 
 ::-webkit-scrollbar-track {
@@ -55,32 +54,37 @@ body {
 * {
   scrollbar-width: thin;
   scrollbar-color: #3f3f3f #0c0c0c;
+  /*cursor: none !important;*/
 }
 
+.cursor {
+    mix-blend-mode: difference;
+    pointer-events: none;
+    position: fixed;
+    z-index: 9999;
+}
 
 .contact-tab {
-    position: relative;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(
-            90deg,
-            var(--color-red) 0%,
-            var(--color-red-light) 50%,
-            var(--color-red) 100%
-    );
-    background-size: 200% auto;
-    animation: shine 4s linear infinite;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-red) 0%,
+    var(--color-red-light) 50%,
+    var(--color-red) 100%
+  );
+  background-size: 200% auto;
+  animation: shine 4s linear infinite;
 }
+
 
 @keyframes shine {
-    0% {
-        background-position: -200% center;
-    }
-    100% {
-        background-position: 200% center;
-    }
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
-
-
-
