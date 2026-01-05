@@ -85,7 +85,7 @@ const About = () => {
                             I’m Abdulrahman Saad, a <span className="text-red-light">Front-end Developer</span> focused on high-end interactive craft.
                         </h3>
                         <p className="reveal-text text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-                            Leading technical vision at <a href={`https://texon-io-dev.netlify.app/`} className="text-black dark:text-white font-semibold hover-target">Texon</a> and mentoring the next generation at GDG. I build digital products that feel fast, polished, and purposeful.
+                            Technical Lead and Product Designer at <a href={`https://texon-io-dev.netlify.app/`} className="text-black dark:text-white font-semibold hover-target">Texon</a> . From ideating UI/UX from zero to mentoring at GDG, I engineer digital experiences that are as beautiful as they are functional.
                         </p>
                     </div>
 
@@ -119,8 +119,13 @@ const About = () => {
                         </div>
                     </div>
 
+
+
                     <div className="reveal-text pt-6">
-                        <Button className={`w-fit text-center hover-target py-2`} href="https://drive.google.com/uc?export=download&id=1LPExTzWBFhQGAS5cBXPJVdvkaxfNXPeK" >
+                        <Button
+                            href="https://docs.google.com/document/d/1xwCNjy2_vINvj2qDPtqEPvU-7eTdEJy3Dee8O90ewaY/export?format=pdf"
+                            className={`w-fit text-center py-2 hover-target`}
+                        >
                             Download CV
                         </Button>
                     </div>

@@ -27,7 +27,7 @@ export default function Splash(props) {
             transition={{ delay: 0.7, duration: 0.7 }}
             className="text-gray-500 dark:text-gray-400 text-lg my-4"
           >
-            Make it minimal. Make it yours.
+              Define your space. Elevate your craft.
           </motion.p>
 
           <div className="flex gap-6">

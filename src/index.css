@@ -37,7 +37,7 @@ body {
     @apply relative transition-colors duration-600 dark:bg-black dark:text-white bg-white text-black p-8 py-20 pb-24;
   }
   .section-heading {
-    @apply font-bold text-5xl sm:text-7xl font-balo text-slate-900 dark:text-gray-300 text-center opacity-0 translate-y-20 mb-0;
+    @apply font-bold text-5xl sm:text-7xl font-balo text-black dark:text-gray-300 text-center opacity-0 translate-y-20 mb-0;
   }
   .sub-heading {
     @apply text-gray-400 font-balo font-medium text-xl -tracking-tighter text-center opacity-0 translate-y-20;

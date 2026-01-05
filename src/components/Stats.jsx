@@ -49,7 +49,7 @@ const stats = [
 export default function Stats() {
     return (
         <section id="stats" className="py-20">
-            <SectionHeading>Stats.</SectionHeading>
+            <SectionHeading>Stats</SectionHeading>
             <SubHeading>Numbers that define my professional growth.</SubHeading>
 
             <div className="max-w-5xl mx-auto px-6 mt-16">
