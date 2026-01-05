@@ -7,5 +7,4 @@ import abdallah from "../assets/abdallah.jpg";
 import ramez from "../assets/ramez.jpg";
 import abdo from "../assets/abdo.jpg";
 
-
 export { darkLogo, lightLogo, Taskly, Daleel, iphone, abdallah, ramez, abdo };

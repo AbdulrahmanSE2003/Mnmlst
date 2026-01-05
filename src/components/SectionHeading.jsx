@@ -14,14 +14,14 @@ const SectionHeading = ({ children }) => {
       ease: "power3.inOut",
       scrollTrigger: {
         trigger: h2ref.current,
-        start: "top 85%",
+        start: "top 75%",
         toggleActions: "play none none reverse",
       },
     });
   }, []);
   return (
     <h2 ref={h2ref} className="section-heading">
-      {children}
+      {children}<span className={`text-red-light`}>.</span>
     </h2>
   );
 };

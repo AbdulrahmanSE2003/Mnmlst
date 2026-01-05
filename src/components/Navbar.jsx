@@ -1,20 +1,30 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { FaMoon } from "react-icons/fa";
 import { Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import {useGSAP} from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Navbar = ({ theme, toggleTheme, setShowBot }) => {
   const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => setScrolled(window.scrollY > 600);
+
+        window.addEventListener("scroll", handleScroll)
 
 
+        return () =>{
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, []);
 
   return (
     <header>
       <nav
-        className={`w-full h-14 flex justify-between items-center px-5 py-2 fixed top-0 left-0 right-0 text-black dark:text-gray-100 z-50 bg-white dark:bg-black transition-colors duration-500`}
+        className={`w-full h-14 flex justify-between items-center px-5 py-2 fixed top-0 left-0 right-0 text-black dark:text-gray-100 z-50  transition-colors duration-500 ${scrolled ? "bg-white dark:bg-black" : "bg-transparent"}`}
       >
         <a href={`#hero`} className="font-bold text-lg">
           Mnmlst.
@@ -33,7 +43,8 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
             className="opacity-65 hover:opacity-100 transition duration-300"
           >
             <li>About</li>
-          </a><a
+          </a>
+          <a
             href="#skills"
             className="opacity-65 hover:opacity-100 transition duration-300"
           >
@@ -46,9 +57,9 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
             <li>Projects</li>
           </a>
           <button
-              onClick={() => setShowBot(prev => !prev)}
+            onClick={() => setShowBot((prev) => !prev)}
             href="#contact"
-            className="opacity-65 hover:opacity-100 transition duration-300 cursor-pointer contact-tab"
+            className="opacity-90 hover:opacity-100 font-semibold transition duration-300 cursor-pointer contact-tab"
           >
             <li>Contact</li>
           </button>
@@ -56,7 +67,7 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="cursor-pointer ml-4 rounded-full shadow-xl z-20 transition-colors duration-300 text-xl dark:text-yellow-400 text-slate-700"
+            className="cursor-pointer ml-4 rounded-full z-20 transition-colors duration-500 text-xl dark:text-yellow-400 text-black bg-transparent hover:bg-zinc-300/50 p-1.5"
           >
             {theme === "dark" ? <Sun /> : <FaMoon />}
           </button>
@@ -94,7 +105,8 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
                 className="hover:opacity-100 opacity-70 transition"
               >
                 Home
-              </a><a
+              </a>
+              <a
                 href="#about"
                 onClick={() => setIsOpen(false)}
                 className="hover:opacity-100 opacity-70 transition"
@@ -116,8 +128,8 @@ const Navbar = ({ theme, toggleTheme, setShowBot }) => {
                 Projects
               </a>
               <button
-                  onClick={() => setShowBot(prev => !prev)}
-                className="hover:opacity-100 opacity-70 transition"
+                onClick={() => setShowBot((prev) => !prev)}
+                className="hover:opacity-100 opacity-70 transition cursor-pointer"
               >
                 Contact
               </button>

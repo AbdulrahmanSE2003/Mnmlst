@@ -21,17 +21,16 @@ export default function Splash(props) {
             Choose your vibe ✦
           </motion.h1>
 
-            <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.7 }}
-                className="text-gray-500 dark:text-gray-400 text-lg my-4"
-            >
-                Make it minimal. Make it yours.
-            </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.7 }}
+            className="text-gray-500 dark:text-gray-400 text-lg my-4"
+          >
+              Define your space. Elevate your craft.
+          </motion.p>
 
-
-            <div className="flex gap-6">
+          <div className="flex gap-6">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -49,15 +48,14 @@ export default function Splash(props) {
             >
               Dark
             </motion.button>
-
           </div>
 
-            {/* Subtle Floating Shapes */}
-            <SubtleStars
-                pos1={`top-20 left-10`}
-                pos2={`bottom-32 right-20`}
-                pos3={`top-2/3 left-6`}
-            />
+          {/* Subtle Floating Shapes */}
+          <SubtleStars
+            pos1={`top-20 left-10`}
+            pos2={`bottom-32 right-20`}
+            pos3={`top-2/3 left-6`}
+          />
         </motion.section>
       )}
     </AnimatePresence>

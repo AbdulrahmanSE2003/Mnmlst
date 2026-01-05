@@ -1,73 +1,50 @@
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-const ProjectCard = ({
-  title,
-  description,
-  image,
-  demoLink,
-  githubLink,
-  tech,
-  project,
-}) => {
-  return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col group hover:-translate-y-[6px]">
-      {/* صورة البروجكت */}
-      <div className="h-48 w-full overflow-hidden">
-        <img
-          src={image}
-          alt={title}
-          className="w-full brightness-90 dark:brightness-[80%] h-full object-cover hover:scale-105 transition-transform duration-500"
-        />
-      </div>
+const ProjectCard = ({ project, index }) => {
+    const { title, category, description, imageurl: image, demolink, githublink, tech } = project;
 
-      {/* التفاصيل */}
-      <div className="flex-1 flex flex-col p-5">
-        <h3 className="text-xl font-semibold mb-2 dark:text-white  group-hover:text-red-light dark:group-hover:text-red-dev transition-colors duration-300">
-          {title}
-        </h3>
-        <p className="text-gray-600 dark:text-gray-300 text-sm flex-1 min-h-10 max-h-10 overflow-hidden">
-          {description}
-        </p>
+    return (
+        <>
+            {/* Image Section */}
+            <div className="flex-1 w-full group relative overflow-hidden rounded-3xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-400 dark:border-zinc-600">
+                <img
+                    src={image}
+                    alt={title}
+                    className="w-full aspect-video md:aspect-auto md:h-[450px] object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                />
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-6">
+                    <a href={githublink} target="_blank" rel="noreferrer" className="text-white hover:text-red-light transition-colors p-3 bg-black/20 backdrop-blur-md rounded-full">
+                        <FaGithub size={24} />
+                    </a>
+                    <a href={demolink} target="_blank" rel="noreferrer" className="text-white hover:text-red-light transition-colors p-3 bg-black/20 backdrop-blur-md rounded-full">
+                        <FaExternalLinkAlt size={22} />
+                    </a>
+                </div>
+            </div>
 
-        {/* Tech Stack */}
-        <div className="mt-3 flex flex-wrap gap-2">
-          {tech.map((t, i) => (
-            <span
-              key={i}
-              className="bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors duration-300 text-gray-700 dark:text-gray-300 text-xs px-2 py-1 rounded-lg"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
+            {/* Info Section */}
+            <div className={`flex-1 flex flex-col ${index % 2 !== 0 ? "md:items-end md:text-right" : "md:items-start md:text-left"}`}>
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-red-light mb-4">
+                    {category}
+                </span>
+                <h3 className="text-4xl md:text-5xl font-black tracking-tighter dark:text-white mb-6">
+                    {title}
+                </h3>
+                <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-8 max-w-lg">
+                    {description}
+                </p>
 
-        {/* أزرار */}
-        <div className="mt-4 flex gap-3">
-          {demoLink && (
-            <a
-              href={demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-colors text-sm"
-            >
-              <ExternalLink size={16} /> Demo
-            </a>
-          )}
-          {githubLink && (
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm"
-            >
-              <Github size={16} /> Code
-            </a>
-          )}
-        </div>
-      </div>
-    </div>
-  );
+                <div className={`flex flex-wrap gap-4 ${index % 2 !== 0 ? "md:justify-end" : "md:justify-start"}`}>
+                    {tech.map((t) => (
+                        <span key={t} className="text-[11px] font-bold text-zinc-500 uppercase tracking-widest border-b border-zinc-300 dark:border-zinc-600 hover:border-red-light hover:text-red-light transition-colors duration-300 pb-1">
+                            {t}
+                        </span>
+                    ))}
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default ProjectCard;
