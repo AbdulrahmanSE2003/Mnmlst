@@ -15,7 +15,9 @@ import CustomCursor from "./components/CustomCursor.jsx";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+  const [theme, setTheme] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+  );
   const [startAnimation, setStartAnimation] = useState(false);
   const [showBot, setShowBot] = useState(false);
 
@@ -54,7 +56,7 @@ export default function App() {
   }
   return (
     <>
-        <CustomCursor />
+      <CustomCursor />
       <Navbar theme={theme} toggleTheme={toggleTheme} setShowBot={setShowBot} />
 
       <Splash
@@ -64,7 +66,7 @@ export default function App() {
       />
 
       <Hero onClick={toggleTheme} theme={theme} start={startAnimation} />
-      <About/>
+      <About />
       <Dev dir={"left"}>Creative.</Dev>
       <Skills theme={theme} />
       <Dev>Minimal.</Dev>
