@@ -102,7 +102,7 @@ const About = () => {
                 className="text-black dark:text-white font-semibold hover-target"
               >
                 Texon
-              </a>{" "}
+              </a>
               . From ideating UI/UX from zero to mentoring at GDG, I engineer
               digital experiences that are as beautiful as they are functional.
             </p>
