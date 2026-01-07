@@ -1,0 +1,58 @@
+/* Button.css */
+
+.custom-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Centralize content horizontally */
+  border-radius: 9999px;
+  border: 1px solid currentColor;
+  background: transparent;
+  transition: all 0.5s ease;
+  min-width: 160px; /* Adjusted for better proportions */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* The expanding circle background */
+.btn-bg {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  /* Start from center bottom */
+  clip-path: circle(0% at 50% 100%);
+  /* Slowed down to 1.2s for a smooth cinematic feel */
+  transition: clip-path 2s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 0;
+}
+
+/* Dark mode adjustment */
+.dark .btn-bg {
+  background-color: white;
+}
+
+/* Hover state: fill the button */
+.custom-btn:hover .btn-bg {
+  clip-path: circle(150% at 50% 100%);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 10;
+  padding: 14px 36px; /* Optimized padding for dimensions */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.8s ease;
+}
+
+/* Change text color on hover */
+.custom-btn:hover .btn-text {
+  color: white;
+}
+
+.dark .custom-btn:hover .btn-text {
+  color: black;
+}

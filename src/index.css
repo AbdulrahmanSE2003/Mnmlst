@@ -34,7 +34,7 @@ body {
     @apply px-6 py-2 rounded-2xl border border-gray-600 bg-white text-black dark:bg-black dark:text-white shadow-sm  cursor-pointer transition duration-200 flex flex-col items-center justify-center  hover:bg-gray-900 dark:hover:bg-gray-100  hover:text-white dark:hover:text-black;
   }
   section {
-    @apply relative transition-colors duration-600 dark:bg-black dark:text-white bg-white text-black p-8 py-20 pb-24;
+    @apply relative transition-colors duration-600 dark:bg-black dark:text-white bg-white text-black p-4 sm:p-8 py-20 pb-24;
   }
   .section-heading {
     @apply font-bold text-5xl sm:text-7xl font-balo text-black dark:text-gray-300 text-center opacity-0 translate-y-20 mb-0;
@@ -58,12 +58,11 @@ body {
 }
 
 .cursor {
-    mix-blend-mode: difference;
-    pointer-events: none;
-    position: fixed;
-    z-index: 9999;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
 }
-
 
 .contact-tab {
   position: relative;
@@ -79,7 +78,6 @@ body {
   background-size: 200% auto;
   animation: shine 4s linear infinite;
 }
-
 
 @keyframes shine {
   0% {
