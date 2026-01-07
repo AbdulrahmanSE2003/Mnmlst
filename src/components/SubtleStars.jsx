@@ -18,17 +18,17 @@ const SubtleStars = ({ pos1, pos2, pos3 }) => {
   return (
     <>
       <span
-        className={`floating-shape z-[1] absolute ${pos1} text-3xl text-red dark:text-red-300 opacity-30`}
+        className={`floating-shape absolute ${pos1} text-3xl text-red dark:text-red-300 opacity-30`}
       >
         ✦
       </span>
       <span
-        className={`floating-shape z-[1] absolute ${pos2} text-3xl text-red dark:text-red-300 opacity-30`}
+        className={`floating-shape absolute ${pos2} text-3xl text-red dark:text-red-300 opacity-30`}
       >
         ●
       </span>
       <span
-        className={`floating-shape z-[1] absolute ${pos3} text-3xl text-red dark:text-red-300 opacity-30`}
+        className={`floating-shape absolute ${pos3} text-3xl text-red dark:text-red-300 opacity-30`}
       >
         ✦
       </span>

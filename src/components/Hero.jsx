@@ -26,7 +26,7 @@ export default function Hero({ start }) {
           ease: "power3.inOut",
           duration: 0.8,
         },
-        "-=0.5",
+        "-=0.5"
       )
       .to(
         "#hero-desc",
@@ -36,7 +36,7 @@ export default function Hero({ start }) {
           ease: "power3.inOut",
           duration: 0.8,
         },
-        "-=0.5",
+        "-=0.5"
       )
       .to(
         ".hero-btn",
@@ -47,7 +47,7 @@ export default function Hero({ start }) {
           ease: "power3.inOut",
           stagger: 0.3,
         },
-        "-=0.5",
+        "-=0.5"
       )
       .to(".hero-star", {
         opacity: 1,
@@ -117,12 +117,15 @@ export default function Hero({ start }) {
         </p>
 
         {/* Hero Buttons */}
-        <div className="mt-8 flex gap-4">
-          <Button href="#projects" className="hero-btn opacity-0 ">
+        <div className="mt-8 flex max-sm:flex-col gap-4">
+          <Button
+            href="#projects"
+            className="w-fit hero-btn text-center opacity-0 "
+          >
             View Projects
           </Button>
           <Button
-            className={`btn-dark w-fit hero-btn text-center opacity-0`}
+            className={`w-fit hero-btn text-center opacity-0`}
             href={`https://wa.me/201116678912`}
             // target={"_parent"}
           >

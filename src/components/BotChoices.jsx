@@ -62,7 +62,7 @@ const BotChoices = ({ className }) => {
         <button
           key={`${choice} ${i}`}
           onClick={() => handleChoice(i)}
-          className={`border border-red-dev rounded-3xl py-3 px-4 w-fit mb-2 hover:shadow-xl hover:-translate-y-1 transition duration-400 cursor-pointer choice opacity-0 translate-y-5`}
+          className={`border border-red-dev rounded-2xl py-3 px-4 w-fit mb-2 hover:shadow-xl hover:-translate-y-1 transition duration-400 cursor-pointer choice opacity-0 translate-y-5`}
         >
           {choice.q}
         </button>
