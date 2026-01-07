@@ -42,9 +42,7 @@ const ProjectCard = ({ project, index }) => {
       </div>
 
       {/* Info Section */}
-      <div
-        className={`flex-1 flex flex-col ${index % 2 !== 0 ? "md:items-end md:text-right" : "md:items-start md:text-left"}`}
-      >
+      <div className={`flex-1 flex flex-col`}>
         <span className="text-[10px] font-black uppercase tracking-[0.3em] text-red-light mb-4">
           {category}
         </span>
@@ -55,9 +53,7 @@ const ProjectCard = ({ project, index }) => {
           {description}
         </p>
 
-        <div
-          className={`flex flex-wrap gap-4 ${index % 2 !== 0 ? "md:justify-end" : "md:justify-start"}`}
-        >
+        <div className={`flex flex-wrap gap-4 `}>
           {tech.map((t) => (
             <span
               key={t}
