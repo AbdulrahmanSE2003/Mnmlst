@@ -5,7 +5,7 @@ import SubHeading from "./SubHeading.jsx";
 import SubtleStars from "./SubtleStars.jsx";
 import StatCard from "./StatCard.jsx";
 
-// مكون فرعي للعداد عشان كل رقم يعد لوحده
+
 export const Counter = ({ target, duration = 2 }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -13,16 +13,15 @@ export const Counter = ({ target, duration = 2 }) => {
 
   useEffect(() => {
     if (isInView) {
-      // لو الرقم علامة اللانهاية، مش محتاج عد
       if (target === "∞") {
         setCount("∞");
         return;
       }
 
       let start = 0;
-      const end = parseInt(target.replace(/\D/g, "")); // استخراج الرقم فقط
-      const totalMiliseconds = duration * 1000;
-      const incrementTime = totalMiliseconds / end;
+      const end = parseInt(target.replace(/\D/g, ""));
+      const totalMilliseconds = duration * 1000;
+      const incrementTime = totalMilliseconds / end;
 
       const timer = setInterval(() => {
         start += 1;
@@ -36,16 +35,22 @@ export const Counter = ({ target, duration = 2 }) => {
 
   return <span ref={ref}>{target.includes("+") ? `+${count}` : count}</span>;
 };
+  
 
-const stats = [
-  { number: "+45", label: "Projects Done" },
-  {
-    number: `+${(new Date().getFullYear() + 2) % 2025}`,
-    label: "Years of Coding",
-  },
-  { number: "8", label: "Happy Clients" },
-  { number: "∞", label: "Ideas Brewing" },
-];
+  const currentYear = new Date().getFullYear();
+  const startYear = 2025; 
+  const yearsPassed = currentYear - startYear;
+
+  const totalProjects = 30 + (yearsPassed * 15);
+  const totalClients = 5 + (yearsPassed * 3);
+  const codingYears = yearsPassed + 2; 
+
+  const stats = [
+    { number: `+${totalProjects}`, label: "Projects Done" },
+    { number: `+${codingYears}`, label: "Years of Coding" },
+    { number: `+${totalClients}`, label: "Happy Clients" },
+    { number: "∞", label: "Ideas Brewing" },
+  ];
 
 export default function Stats() {
   return (

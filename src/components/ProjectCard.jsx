@@ -19,7 +19,7 @@ const ProjectCard = ({ project, index }) => {
         <img
           src={image}
           alt={title}
-          className="w-full aspect-video md:aspect-auto md:h-[450px] object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+          className="w-full aspect-video md:aspect-auto md:h-112.5 object-cover grayscale-40 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
         />
         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-6">
           <a

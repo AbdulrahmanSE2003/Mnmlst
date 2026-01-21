@@ -70,12 +70,10 @@ const Projects = () => {
           </div>
         ) : (
           <div className="mt-32 flex flex-col gap-40">
-            {" "}
-            {/* مسافات كبيرة بين المشاريع */}
             {projects.map((p, i) => (
               <div
                 key={i}
-                className={`project-reveal flex flex-col md:flex-row items-center gap-12 lg:gap-24 ${
+                className={`project-reveal flex flex-col md:flex-row items-center gap-12 ${
                   i % 2 !== 0 ? "md:flex-row-reverse" : ""
                 }`}
               >

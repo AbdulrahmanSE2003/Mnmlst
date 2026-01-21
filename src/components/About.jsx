@@ -49,7 +49,7 @@ const About = () => {
           duration: 0.8,
           ease: "power2.out",
         },
-        "-=0.5"
+        "-=0.5",
       );
 
       // 3. أنيميشن النصوص - كشف السطور سطر سطر
@@ -65,7 +65,7 @@ const About = () => {
         },
       });
     },
-    { scope: container }
+    { scope: container },
   );
 
   return (
@@ -111,13 +111,13 @@ const About = () => {
           {/* Timeline (The Journey) */}
           <div className="journey-container relative pl-10 py-2">
             {/* Vertical Line */}
-            <div className="journey-line absolute left-[7px] top-0 bottom-0 w-[2px] bg-gray-200 dark:bg-zinc-800 origin-top" />
+            <div className="journey-line absolute left-1.75 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-zinc-800 origin-top" />
 
             <div className="space-y-12">
               <div className="journey-item relative">
                 {/* Dot: Perfect Centering */}
-                <div className="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-red-light border-4 border-white dark:border-zinc-950 z-10" />
-                <div className="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-red-light border-4 border-white dark:border-zinc-950 z-10 animate-ping" />
+                <div className="absolute -left-10.25 top-1.5 w-5 h-5 rounded-full bg-red-light border-4 border-white dark:border-zinc-950 z-10" />
+                <div className="absolute -left-10.25 top-1.5 w-5 h-5 rounded-full bg-red-light border-4 border-white dark:border-zinc-950 z-10 animate-ping" />
                 <h4 className="text-xs uppercase tracking-[0.2em] text-red-light font-black mb-2">
                   Leadership
                 </h4>
@@ -133,7 +133,7 @@ const About = () => {
 
               <div className="journey-item relative">
                 {/* Dot */}
-                <div className="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-gray-400 border-4 border-white dark:border-zinc-950 z-10" />
+                <div className="absolute -left-10.25 top-1.5 w-5 h-5 rounded-full bg-gray-400 border-4 border-white dark:border-zinc-950 z-10" />
 
                 <h4 className="text-xs uppercase tracking-[0.2em] text-gray-400 font-black mb-2">
                   Education & Impact
