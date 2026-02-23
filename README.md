@@ -14,7 +14,7 @@ Mnmlst is more than just a portfolio; it's a design statement. Built with a focu
 * **Clean Codebase:** Follows professional folder structures and naming conventions for easy maintainability.
 
 ### 🛠️ Tech Stack
-* **Framework:** Next.js (SSG for SEO & Speed)
+* **Framework:** React
 * **Styling:** Tailwind CSS
 * **Animations:** Framer Motion
 * **Deployment:** Vercel
