@@ -1,12 +1,20 @@
-# React + Vite
+# ✨ Mnmlst – A Minimalist Digital Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mnmlst is more than just a portfolio; it's a design statement. Built with a focus on "Visual Silence," this project showcases how typography and whitespace can create a more impactful user experience than cluttered layouts.
 
-Currently, two official plugins are available:
+### 🎨 Design Goals
+* **Minimalist Aesthetic:** Using a curated palette of muted tones to keep the focus on the content.
+* **Typography First:** Leveraging hierarchy and whitespace to guide the user's eye naturally through the projects.
+* **Meaningful Motion:** Using **Framer Motion** for subtle entrance animations and smooth page transitions that feel organic, not distracting.
+* **User-Centric UX:** Fast loading times and intuitive navigation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🚀 Implementation Details
+* **Component Architecture:** Highly reusable React components for project cards and section headers.
+* **Responsive Fluidity:** Custom CSS Grid and Flexbox layouts that feel "liquid" across different screen resolutions.
+* **Clean Codebase:** Follows professional folder structures and naming conventions for easy maintainability.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🛠️ Tech Stack
+* **Framework:** Next.js (SSG for SEO & Speed)
+* **Styling:** Tailwind CSS
+* **Animations:** Framer Motion
+* **Deployment:** Vercel
