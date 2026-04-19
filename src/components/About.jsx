@@ -152,7 +152,7 @@ const About = () => {
 
           <div className="reveal-text pt-6">
             <Button
-              href="https://docs.google.com/document/d/1xwCNjy2_vINvj2qDPtqEPvU-7eTdEJy3Dee8O90ewaY/export?format=pdf"
+              href="https://drive.google.com/uc?export=download&id=1FnN2NKtqLvmAQantSjo_qgN60mRRiyom"
               className={`w-fit text-center py-2 hover-target`}
             >
               Download CV
