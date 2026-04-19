@@ -9,12 +9,35 @@ import Button from "./Button.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const journeyItems = [
+  {
+    label: "Startup",
+    color: "text-red-light",
+    dotColor: "bg-red-light",
+    ping: true,
+    title: "Texon",
+    titleSuffix: "Founded & Built",
+    description:
+      "Took a product from zero — owning the full cycle from UI/UX ideation to frontend architecture and technical execution.",
+    href: "https://texon-io-dev.netlify.app/",
+  },
+  {
+    label: "Education & Impact",
+    color: "text-gray-400",
+    dotColor: "bg-gray-400",
+    ping: false,
+    title: "GDG on Campus",
+    titleSuffix: "Web Mentor",
+    description:
+      "Breaking down complex web ecosystems for the next generation of developers and fostering a culture of creative engineering.",
+  },
+];
+
 const About = () => {
   const container = useRef();
 
   useGSAP(
     () => {
-      // 1. أنيميشن الصور - ظهور ناعم مع حركة خفيفة
       gsap.from(".img-card", {
         opacity: 0,
         scale: 0.9,
@@ -28,7 +51,6 @@ const About = () => {
         },
       });
 
-      // 2. أنيميشن التايم لاين - رسم الخط أولاً ثم ظهور النقاط
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".journey-container",
@@ -52,7 +74,6 @@ const About = () => {
         "-=0.5",
       );
 
-      // 3. أنيميشن النصوص - كشف السطور سطر سطر
       gsap.from(".reveal-text", {
         opacity: 0,
         y: 20,
@@ -70,90 +91,89 @@ const About = () => {
 
   return (
     <section ref={container} id="about" className="py-20 px-5 sm:px-14">
-      {/* Header */}
-
       <SectionHeading>About</SectionHeading>
       <SubHeading>Some information about my human side.</SubHeading>
 
-      <div className="grid lg:grid-cols-2 gap-16 items-start mt-10 ">
-        {/* Left Side: Image Experience */}
+      <div className="grid lg:grid-cols-2 gap-16 items-start mt-10">
+        {/* Left: Photo */}
         <div className="img-card group relative overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 p-2 max-w-lg">
-          <div className="aspect-auto overflow-hidden rounded-2xl flex flex-col justify-center">
+          <div className="aspect-auto overflow-hidden rounded-2xl">
             <img
               src={abdo}
-              alt="Abdulrahman"
+              alt="Abdulrahman Saad"
               className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
             />
           </div>
         </div>
 
-        {/* Right Side: Content */}
+        {/* Right: Content */}
         <div className="flex flex-col gap-10">
           <div className="space-y-6">
             <h3 className="reveal-text text-3xl font-bold leading-snug">
-              I’m Abdulrahman Saad, a{" "}
-              <span className="text-red-light">Front-end Developer</span>{" "}
-              focused on high-end interactive craft.
+              I'm Abdulrahman Saad, a{" "}
+              <span className="text-red-light">Front-end Developer</span> who
+              obsesses over the intersection of clean code and intentional
+              design.
             </h3>
             <p className="reveal-text text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-              Technical Lead and Product Designer at{" "}
-              <a
-                href={`https://texon-io-dev.netlify.app/`}
-                className="text-black dark:text-white font-semibold hover-target"
-              >
-                Texon
-              </a>
-              . From ideating UI/UX from zero to mentoring at GDG, I engineer
-              digital experiences that are as beautiful as they are functional.
+              I build digital experiences that are fast, polished, and
+              thoughtfully crafted — from pixel-level UI details to scalable
+              frontend architecture.
             </p>
           </div>
 
-          {/* Timeline (The Journey) */}
+          {/* Timeline */}
           <div className="journey-container relative pl-10 py-2">
-            {/* Vertical Line */}
             <div className="journey-line absolute left-1.75 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-zinc-800 origin-top" />
 
             <div className="space-y-12">
-              <div className="journey-item relative">
-                {/* Dot: Perfect Centering */}
-                <div className="absolute -left-10.25 top-1.5 w-5 h-5 rounded-full bg-red-light border-4 border-white dark:border-zinc-950 z-10" />
-                <div className="absolute -left-10.25 top-1.5 w-5 h-5 rounded-full bg-red-light border-4 border-white dark:border-zinc-950 z-10 animate-ping" />
-                <h4 className="text-xs uppercase tracking-[0.2em] text-red-light font-black mb-2">
-                  Leadership
-                </h4>
-                <div className="text-2xl font-bold tracking-tight">
-                  CTO & Founder <span className={`text-red-light`}>—</span>{" "}
-                  Texon
+              {journeyItems.map((item, index) => (
+                <div key={index} className="journey-item relative">
+                  <div
+                    className={`absolute -left-10.25 top-1.5 w-5 h-5 rounded-full ${item.dotColor} border-4 border-white dark:border-zinc-950 z-10`}
+                  />
+                  {item.ping && (
+                    <div
+                      className={`absolute -left-10.25 top-1.5 w-5 h-5 rounded-full ${item.dotColor} border-4 border-white dark:border-zinc-950 z-10 animate-ping opacity-75`}
+                    />
+                  )}
+                  <h4
+                    className={`text-xs uppercase tracking-[0.2em] ${item.color} font-black mb-2`}
+                  >
+                    {item.label}
+                  </h4>
+                  <div className="text-2xl font-bold tracking-tight">
+                    {item.titleSuffix} <span className="text-red-light">—</span>{" "}
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="hover:underline hover-target"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      item.title
+                    )}
+                  </div>
+                  <p className="text-gray-500 text-base leading-relaxed max-w-sm mt-1">
+                    {item.description}
+                  </p>
                 </div>
-                <p className="text-gray-500 text-base leading-relaxed max-w-sm">
-                  Architecting the future of minimalist technology and leading
-                  the engineering vision behind scalable digital products.
-                </p>
-              </div>
-
-              <div className="journey-item relative">
-                {/* Dot */}
-                <div className="absolute -left-10.25 top-1.5 w-5 h-5 rounded-full bg-gray-400 border-4 border-white dark:border-zinc-950 z-10" />
-
-                <h4 className="text-xs uppercase tracking-[0.2em] text-gray-400 font-black mb-2">
-                  Education & Impact
-                </h4>
-                <div className="text-2xl font-bold tracking-tight">
-                  Web Mentor <span className={`text-red-light`}>—</span> GDG on
-                  Campus
-                </div>
-                <p className="text-gray-500 text-base leading-relaxed max-w-sm">
-                  Empowering next-gen developers by deconstructing complex web
-                  ecosystems and fostering a culture of creative engineering.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
 
-          <div className="reveal-text pt-6">
+          <p className="reveal-text text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+            I'm now looking to bring that same ownership mindset to a team
+            building something meaningful.
+          </p>
+
+          <div className="reveal-text">
             <Button
               href="https://drive.google.com/uc?export=download&id=1FnN2NKtqLvmAQantSjo_qgN60mRRiyom"
-              className={`w-fit text-center py-2 hover-target`}
+              className="w-fit text-center py-2 hover-target"
             >
               Download CV
             </Button>

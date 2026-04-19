@@ -107,7 +107,7 @@ export default function Hero({ start }) {
           id="sub-heading"
           className="font-semibold text-xl sm:text-2xl lg:text-4xl opacity-0 translate-y-6"
         >
-          Front-end Developer.
+          Front-end Engineer.
         </h5>
         <p
           id="hero-desc"
