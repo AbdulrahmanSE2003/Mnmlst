@@ -16,7 +16,7 @@ const Projects = () => {
 
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbxPWY-26whixFJruOMvPVbofHV7k-0wv27mo57T_qHB6eA3fgwJ2JbZ2LzCelLb6sOJdw/exec"
+      "https://script.google.com/macros/s/AKfycbxPWY-26whixFJruOMvPVbofHV7k-0wv27mo57T_qHB6eA3fgwJ2JbZ2LzCelLb6sOJdw/exec",
     )
       .then((res) => res.json())
       .then((data) => {
@@ -49,7 +49,7 @@ const Projects = () => {
               start: "top 30%",
               toggleActions: "play none none reverse",
             },
-          }
+          },
         );
       });
     }
@@ -66,7 +66,7 @@ const Projects = () => {
 
         {loading ? (
           <div className="h-96 flex items-center justify-center text-zinc-400 animate-pulse font-medium tracking-widest">
-            FETCHING ARTIFACTS...
+            Loading ARTIFACTS...
           </div>
         ) : (
           <div className="mt-32 flex flex-col gap-40">
