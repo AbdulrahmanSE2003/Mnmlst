@@ -92,7 +92,7 @@ const CtaCard = () => (
 
 // Section Component
 const Projects = () => (
-  <section className="min-h-screen w-full my-16 p-16 space-y-10">
+  <section className="min-h-screen w-full my-16 p-8 sm:p-16 space-y-10">
     <SectionHeading>Projects</SectionHeading>
 
     <motion.div
