@@ -77,7 +77,7 @@ const Hero = () => {
       {/* Floating icons */}
       <motion.div
         variants={floatIn}
-        className="absolute top-[12.5%] left-[12.5%] z-10"
+        className="absolute  top-[12.5%] left-[5%] sm:left-[12.5%] z-10"
         animate={{ y: [0, -10, 0] }}
         transition={{
           duration: 4,
@@ -99,7 +99,7 @@ const Hero = () => {
 
       <motion.div
         variants={floatIn}
-        className="absolute bottom-[12.5%] right-[12.5%] z-10"
+        className="absolute bottom-[12.5%] right-[5%] sm:right-[12.5%] z-10"
         animate={{ y: [0, 10, 0] }}
         transition={{
           duration: 5,
