@@ -282,7 +282,7 @@ export const testimonials = [
     initial: <Layers className="size-18 stroke-[1.5px]  text-muted" />,
   },
   {
-    name: "Dr. Salma Mohamedd",
+    name: "Dr. Salma Mohammed",
     role: "Founder Ashiaa Store",
     company: "Ashiaa Online Store",
     quote:

@@ -47,7 +47,7 @@ function FlipCard({ item }: { item: (typeof testimonials)[0] }) {
 
 export default function Testimonials() {
   return (
-    <section className="px-14 py-24">
+    <section className="px-7 sm:px-14 py-24">
       <div className="container mx-auto ">
         <div className="flex items-end justify-between mb-16">
           <div>
