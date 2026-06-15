@@ -19,11 +19,11 @@ const Glimpse = () => {
   return (
     <motion.section
       ref={ref}
-      className="min-h-screen w-full my-16 p-16 space-y-8"
+      className="min-h-screen w-full my-16 p-8 sm:p-16 space-y-8"
     >
       <SectionHeading>Hey!</SectionHeading>
 
-      <div className="flex flex-col-reverse md:flex-row-reverse justify-between px-8 pt-8 h-full items-start gap-6 md:gap-12 relative">
+      <div className="flex flex-col-reverse md:flex-row-reverse justify-between px-4 sm:px-8 pt-8 h-full items-start gap-6 md:gap-12 relative">
         <div className="flex flex-col justify-between md:w-2/3 lg:w-1/2 gap-16">
           <motion.p
             variants={variants}

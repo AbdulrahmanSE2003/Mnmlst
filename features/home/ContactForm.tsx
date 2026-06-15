@@ -53,7 +53,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-foreground text-background rounded-xl p-5 w-[42.5%]"
+      className="bg-foreground max-sm:w-full text-background rounded-xl p-5 w-[42.5%]"
     >
       <FieldGroup>
         <FieldSet>

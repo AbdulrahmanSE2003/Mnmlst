@@ -1,5 +1,7 @@
 "use client";
-import { motion, Variants } from "framer-motion";
+
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { bgTextures, projects } from "@/lib/constants";
@@ -7,106 +9,109 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Types
 type Project = (typeof projects)[0];
 
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 },
-  },
+const ScrollCardWrapper = ({ children }: { children: React.ReactNode }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 0.6, 1], [0.85, 1, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.4, 1], [0.6, 1, 1]);
+
+  return (
+    <motion.div
+      ref={containerRef}
+      style={{ scale, opacity }}
+      className="w-full will-change-transform"
+    >
+      {children}
+    </motion.div>
+  );
 };
 
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-};
-
-// Project Card Component
 const ProjectCard = ({ p }: { p: Project }) => (
-  <motion.div
-    variants={cardVariants}
-    className="relative h-120 rounded-4xl overflow-hidden shadow-2xl group border border-zinc-700"
-  >
-    <Image
-      src={p.image}
-      alt={p.title}
-      fill
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      className="object-cover transition-transform duration-700 group-hover:scale-105"
-    />
+  <ScrollCardWrapper>
+    <div className="relative h-[65vh] md:h-[90vh] w-full rounded-4xl overflow-hidden shadow-2xl group border border-zinc-800">
+      <Image
+        src={p.image}
+        alt={p.title}
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover transition-transform duration-1000 ease-out group-hover:scale-103"
+      />
 
-    <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
 
-    <div className="absolute inset-0 z-10 flex flex-col justify-end gap-3 p-8 text-white">
-      <h6 className="text-3xl font-semibold drop-shadow-md">{p.title}</h6>
-      <p className="text-sm font-medium leading-relaxed tracking-wide text-zinc-200 drop-shadow-sm max-w-[90%]">
-        {p.description}
-      </p>
-    </div>
-  </motion.div>
-);
+      <div className="absolute inset-0 z-10 flex flex-col md:flex-row md:items-end justify-between items-start gap-6 p-8 md:p-12 text-white">
+        <div className="space-y-3 max-w-2xl">
+          <h6 className="text-4xl md:text-5xl font-semibold tracking-tight drop-shadow-md">
+            {p.title}
+          </h6>
+          <p className="text-sm md:text-base font-light leading-relaxed text-zinc-300 drop-shadow-sm">
+            {p.brief}
+          </p>
+        </div>
 
-// CTA Card Component
-const CtaCard = () => (
-  <motion.div
-    variants={cardVariants}
-    className="relative h-120 rounded-4xl overflow-hidden shadow-2xl group bg-zinc-800"
-  >
-    <Image
-      src={bgTextures}
-      alt=""
-      fill
-      aria-hidden
-      className="object-cover transition-transform duration-700 group-hover:scale-103"
-    />
-
-    <div className="absolute inset-0 bg-linear-to-b from-foreground/50 to-foreground/25 pointer-events-none" />
-
-    <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 text-white">
-      <h6 className="text-4xl font-semibold font-plus-jakarta-sans leading-snug max-w-xs">
-        See how I shape ideas with clarity and craft — explore more.
-      </h6>
-
-      <Button
-        variant="link"
-        asChild
-        className="text-white text-sm font-medium w-fit p-0 h-auto hover:no-underline"
-      >
         <Link
-          href="/work"
-          className="group flex items-center gap-1 hover:underline"
+          href={`/work/${p.title.toLowerCase().replace(/\s+/g, "-")}`}
+          className="shrink-0 w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300 group-hover:rotate-45"
         >
-          View All Work
-          <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          <ArrowUpRight className="size-6 text-white group-hover:text-black" />
         </Link>
-      </Button>
+      </div>
     </div>
-  </motion.div>
+  </ScrollCardWrapper>
 );
 
-// Section Component
+const CtaCard = () => (
+  <ScrollCardWrapper>
+    <div className="relative h-[50vh] w-full rounded-4xl overflow-hidden shadow-2xl group bg-zinc-900 border border-zinc-800">
+      <Image
+        src={bgTextures}
+        alt=""
+        fill
+        className="object-cover opacity-20 transition-transform duration-1000 group-hover:scale-105"
+      />
+
+      <div className="absolute inset-0 z-10 flex flex-col justify-between p-8 md:p-12 text-white">
+        <h6 className="text-3xl md:text-4xl font-semibold font-plus-jakarta-sans leading-snug max-w-2xl">
+          See how I shape ideas with clarity and craft — explore more.
+        </h6>
+
+        <Button
+          variant="link"
+          asChild
+          className="text-white text-base font-medium w-fit p-0 h-auto hover:no-underline"
+        >
+          <Link
+            href="/work"
+            className="group flex items-center gap-1 hover:underline"
+          >
+            View All Work
+            <ArrowUpRight className="size-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </Button>
+      </div>
+    </div>
+  </ScrollCardWrapper>
+);
+
 const Projects = () => (
-  <section className="min-h-screen w-full my-16 p-16 space-y-10">
+  <section className="w-full my-16 px-6 sm:px-16 space-y-12">
     <SectionHeading>Projects</SectionHeading>
 
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-    >
+    {/* Flex layout forces every element to occupy 100% width cleanly */}
+    <div className="flex flex-col gap-12 max-w-7xl mx-auto">
       {projects.slice(0, 2).map((p) => (
         <ProjectCard key={p.title} p={p} />
       ))}
       <CtaCard />
-    </motion.div>
+    </div>
   </section>
 );
 

@@ -4,8 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const text =
-  "idea to launch. Clean, scalable digital products built to move fast, stay simple, and perform in real-world use — driven by clarity. Every line of code written with purpose, and every decision made to serve the product and the people using it.";
-
+  "Clean, scalable digital products built to move fast and perform in real-world use — driven by clarity, purpose, and intentional design.";
 const words = text.split(" ");
 
 export default function TextReveal() {
@@ -17,8 +16,8 @@ export default function TextReveal() {
   });
 
   return (
-    <section ref={ref} style={{ height: "400vh" }} className="relative">
-      <div className="sticky top-0 h-screen flex items-center justify-center px-16">
+    <section ref={ref} style={{ height: "300vh" }} className="relative">
+      <div className="sticky top-0 h-screen flex items-center justify-center px-8 sm:px-16">
         <div className="max-w-5xl">
           <p className="text-[clamp(1.6rem,3vw,2.3rem)] font-plus-jakarta-sans font-medium text-center leading-snug tracking-tight">
             From{" "}
