@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# mnmlst
+
+A minimalist portfolio built with Next.js 16. Features smooth scroll animations, a contact form powered by Resend, and a clean dark-themed UI.
+
+## Tech Stack
+
+- **Framework** — Next.js 16 (App Router)
+- **Language** — TypeScript
+- **Styling** — Tailwind CSS v4
+- **Animations** — Framer Motion, Lenis (smooth scroll)
+- **Forms** — react-hook-form + Zod validation
+- **Email** — Resend API
+- **Deployment** — Vercel
+
+## Features
+
+- Responsive layouts with Tailwind breakpoints
+- Dark theme with next-themes
+- Animated page transitions
+- Scroll-triggered text reveals and parallax effects
+- 3D testimonial flip cards
+- Dynamic stats counter
+- Zod-validated contact form
+- Per-page SEO metadata, OG images, sitemap
+- Static generation for project detail pages
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+RESEND_API_KEY=re_...
+```
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start dev server |
+| `pnpm build` | Production build |
+| `pnpm start` | Start production server |
+| `pnpm lint` | Run ESLint |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/                  # Next.js App Router pages + API
+  layout.tsx          # Root layout (fonts, providers, metadata)
+  page.tsx            # Home page
+  about/page.tsx      # About page
+  work/page.tsx       # Work listing
+  work/[slug]/page.tsx # Project detail (SSG)
+  api/contact/route.ts # Contact form endpoint
+  robots.ts           # SEO
+  sitemap.ts          # SEO
+  error.tsx           # Error boundary
+  not-found.tsx       # 404 page
+features/             # Feature modules
+  home/               # Home page sections
+  work/               # Work page components
+  about/              # About page components
+components/           # Shared UI
+  layout/             # Navbar, Footer
+  ui/                 # Button, Input, Form fields
+  providers/          # ThemeProvider, LenisProvider
+lib/                  # Utilities + constants
+  constants.tsx       # All data (projects, social links, stack, etc.)
+  utils.ts            # cn(), toSlug()
+public/               # Static assets
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed on Vercel. Push to `main` to trigger automatic deployment.
