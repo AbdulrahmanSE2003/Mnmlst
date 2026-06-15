@@ -19,7 +19,7 @@ const AutoSwitchTitle = () => {
     const handleLoad = () => {
       setTimeout(() => {
         setIsReady(true);
-      }, 3000);
+      }, 2000);
     };
 
     if (document.readyState === "complete") {

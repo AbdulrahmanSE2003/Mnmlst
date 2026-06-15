@@ -32,7 +32,7 @@ const ProjectCard = ({ p }: { p: (typeof projects)[0] }) => (
         <div className="flex flex-col gap-1">
           <span className="text-xl font-medium text-foreground">{p.title}</span>
           <span className="text-sm text-muted-foreground font-light leading-snug">
-            {p.description}
+            {p.brief}
           </span>
         </div>
       </div>

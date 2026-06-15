@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-8 relative overflow-hidden">
       {/* Big 404 background text */}
-      <span className="absolute text-[30vw] font-black text-foreground/[0.04] select-none pointer-events-none leading-none">
+      <span className="absolute text-[30vw] font-black text-foreground/4 select-none pointer-events-none leading-none">
         404
       </span>
 

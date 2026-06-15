@@ -210,8 +210,9 @@ export const steps = [
 export const projects = [
   {
     title: "Bedrock",
+    brief: "Productivity SaaS App",
     description:
-      "Minimalist task manager with Kanban, habit tracking, and Google Tasks sync.",
+      "A minimalist yet powerful productivity app built around Kanban boards, habit tracking, and Google Tasks sync. Designed with a focus on clarity and speed — no clutter, just the tools you need to stay on track. Features real-time data sync via Supabase and a clean auth flow.",
     tech: ["Next.js 16", "Supabase", "Shadcn", "Tailwind"],
     repo: "https://github.com/AbdulrahmanSE2003/Bedrock",
     demo: "https://bedrock-ysgz.vercel.app/",
@@ -219,8 +220,9 @@ export const projects = [
   },
   {
     title: "Threads-flow",
+    brief: "Full-Stack Social Platform",
     description:
-      "Full-stack social platform with real-time feeds and nested threading architecture.",
+      "A full-stack social platform inspired by Threads — built with a nested threading architecture that supports deep conversation trees. Features real-time activity feeds, user profiles, image uploads via Cloudinary, and a robust backend powered by Prisma and Neon PostgreSQL.",
     tech: ["Next.js 16", "Prisma", "Neon PostgreSQL", "Cloudinary"],
     repo: "https://github.com/AbdulrahmanSE2003/threads-flow",
     demo: "https://threads-flow.vercel.app/",
@@ -228,26 +230,29 @@ export const projects = [
   },
   {
     title: "Uni-Solver",
+    brief: "AI-Powered Educational Tool",
     description:
-      "AI-powered assignment helper that processes PDFs and generates structured solutions.",
+      "An AI-powered academic assistant that accepts PDF uploads and generates structured, well-formatted solutions using Google Gemini 1.5 Flash. Built for university students who need fast, reliable help with assignments — with a clean UX that keeps the focus on the answer, not the interface.",
     tech: ["Next.js 16", "Tailwind", "Google Gemini API", "AI"],
     repo: "https://github.com/AbdulrahmanSE2003/uni-solver",
     demo: "https://uni-solver.vercel.app/",
     image: uniSolver,
   },
   {
-    title: "Miro Clone",
+    title: "Miro-Clone",
+    brief: "Real-Time Collaboration Tool",
     description:
-      "Real-time collaborative whiteboard featuring infinite canvas and multi-user cursors.",
+      "A real-time collaborative whiteboard featuring an infinite canvas, live multi-user cursors, and persistent board state. Built with Liveblocks for real-time sync and Convex as the serverless backend. Supports full authentication via Clerk and smooth canvas interactions that feel native.",
     tech: ["Next.js 16", "Clerk", "Liveblocks", "Convex"],
     repo: "https://github.com/AbdulrahmanSE2003/miro-clone",
     demo: "https://miro-clone-five.vercel.app/",
     image: miro,
   },
   {
-    title: "Gemini Clone",
+    title: "Gemini-Clone",
+    brief: "AI Interface Clone",
     description:
-      "A functional, responsive clone of the Gemini AI chat interface.",
+      "A functional, fully responsive clone of the Gemini AI chat interface — built to replicate the core UX patterns of modern AI assistants. Focuses on clean component architecture, smooth message rendering, and a polished UI that mirrors the original product closely.",
     tech: ["TypeScript", "Next.js"],
     repo: "https://github.com/AbdulrahmanSE2003/gemini-clone",
     demo: "https://gemini-clone-eight-sooty.vercel.app/",
