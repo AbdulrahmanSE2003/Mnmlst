@@ -60,25 +60,27 @@ const ProjectView = ({ project }: { project: (typeof projects)[0] }) => {
       variants={pageContainer}
       initial="hidden"
       animate="visible"
-      className="container mx-auto px-14"
+      className="container mx-auto px-6 sm:px-14"
     >
       {/* Header */}
       <motion.div
         variants={headerVariants}
-        className="flex justify-between items-start gap-16 mb-20 h-64"
+        className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-20"
       >
-        <div className="flex flex-col gap-6 max-w-lg justify-between h-full">
+        <div className="flex flex-col gap-6 max-w-lg justify-between">
           <motion.h1
             variants={headerVariants}
-            className="text-6xl font-semibold font-plus-jakarta-sans tracking-tight leading-none"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold drop-shadow-muted drop-shadow-2xl font-plus-jakarta-sans tracking-tight leading-none"
           >
             {project.title}
           </motion.h1>
-          <ProjectLinks project={project} />
+          <div className={`flex gap-3`}>
+            <ProjectLinks project={project} />
+          </div>
         </div>
 
         {/* Stats */}
-        <div className="w-2/5 h-full flex flex-col justify-between">
+        <div className="w-full lg:w-2/5 flex flex-col justify-between gap-6 lg:gap-0">
           <div className="flex flex-col gap-0.5">
             <span className="text-muted-foreground/75 text-base">Category</span>
             <span className="text-lg">{project.brief}</span>
@@ -92,7 +94,7 @@ const ProjectView = ({ project }: { project: (typeof projects)[0] }) => {
       {/* Main Image Banner */}
       <motion.div
         variants={imageVariants}
-        className="relative w-full h-[90vh] rounded-3xl overflow-hidden mb-32 bg-muted shadow-2xl"
+        className="relative w-full h-[50vh] sm:h-[70vh] lg:h-[90vh] rounded-3xl overflow-hidden mb-20 sm:mb-32 bg-muted shadow-2xl"
       >
         <Image
           src={project.image}

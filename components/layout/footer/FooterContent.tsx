@@ -15,18 +15,18 @@ const FooterContent = () => {
         {/* Navigation Links */}
         <div className={`capitalize flex items-center gap-3`}>
           {links.map((link, i) => (
-            <Link
-              key={i}
-              href={link.href}
-              className={`flex items-center gap-3`}
-            >
-              <span
-                className={`text-white/75 hover:text-white transition-colors duration-500`}
-              >
-                {link.label}
-              </span>
-              <span>{`${i === links.length - 1 ? " " : "/ "} `} </span>
-            </Link>
+            <div key={i} className="flex items-center gap-3">
+              <Link href={link.href}>
+                <span
+                  className={`text-white/75 hover:text-white transition-colors duration-500`}
+                >
+                  {link.label}
+                </span>
+              </Link>
+              {i < links.length - 1 && (
+                <span className="text-white/30">/</span>
+              )}
+            </div>
           ))}
         </div>
       </div>

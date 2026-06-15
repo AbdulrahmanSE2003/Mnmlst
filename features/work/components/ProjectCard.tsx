@@ -1,6 +1,7 @@
 "use client";
 
 import { projects } from "@/lib/constants";
+import { toSlug } from "@/lib/utils";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +16,7 @@ const cardVariants: Variants = {
 };
 
 const ProjectCard = ({ p }: { p: (typeof projects)[0] }) => (
-  <Link href={`/work/${p.title}`}>
+  <Link href={`/work/${toSlug(p.title)}`}>
     <motion.div variants={cardVariants} className="group flex flex-col gap-4">
       <div className="relative h-96 rounded-2xl overflow-hidden bg-muted">
         <Image

@@ -11,17 +11,15 @@ const Contact = () => {
           <h5
             className={`capitalize font-plus-jakarta-sans text-4xl sm:text-6xl leading-snug tracking-wide font-bold`}
           >
-            Got A Project <br />
-            in mind!
+            Got a project
+            <br /> in mind?
           </h5>
           <p className={`text-md font-medium`}>
             Have a project or need help?{" "}
             <span className={`text-muted-foreground`}>
-              Fill out the form, and we&apos;ll get back to you soon.
+              Drop me a message — I&apos;ll respond soon
             </span>
           </p>
-
-          {/* Social */}
         </div>
 
         {/* Right Col (Form) */}

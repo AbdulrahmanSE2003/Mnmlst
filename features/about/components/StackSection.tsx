@@ -25,7 +25,8 @@ const StackSection = () => {
               <Image
                 src={item.image}
                 alt={item.name}
-                className={`object-cover w-[65%]  rounded-xl`}
+                fill
+                className={`object-cover p-3 rounded-xl`}
               />
             </div>
             {/* Info */}

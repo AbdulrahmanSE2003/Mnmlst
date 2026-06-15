@@ -21,7 +21,7 @@ const Footer = () => {
 
       {/* Footer Brand */}
       <span
-        className={`font-plus-jakarta-sans text-7xl sm:text-[6rem] md:text-[12rem] tracking-[1rem] text-muted-foreground/25 font-bold absolute bottom-0 md:-bottom-14 -right-2 sm:right-2`}
+        className={`font-plus-jakarta-sans text-7xl sm:text-[6rem] md:text-[12rem] tracking-[1rem] text-muted-foreground/25 font-bold absolute bottom-0 md:bottom-0 -right-2 sm:right-2`}
       >
         Mnmlst.
       </span>
