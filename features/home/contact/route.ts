@@ -15,9 +15,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, idea } = schema.parse(body);
 
-    console.log("Sending from:", email, name);
-
-    const result = await resend.emails.send({
+    await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "abdulrahman.saad2303@gmail.com",
       subject: `New message from ${name}`,
@@ -35,11 +33,8 @@ export async function POST(req: Request) {
       `,
     });
 
-    console.log("Resend result:", result);
-
     return NextResponse.json({ success: true });
-  } catch (err) {
-    console.log(err);
+  } catch {
     return NextResponse.json({ error: "Failed to send." }, { status: 500 });
   }
 }

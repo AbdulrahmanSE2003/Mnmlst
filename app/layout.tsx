@@ -33,15 +33,31 @@ const plusJakartaSansPlusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Mnmlst — Full-Stack Developer",
-  description: "Full-stack developer building clean, fast digital products.",
+  title: "Mnmlst — Frontend Engineer",
+  description:
+    "Frontend engineer building clean, fast, and intentional digital products.",
   openGraph: {
-    title: "Mnmlst",
-    description: "Full-stack developer building clean, fast digital products.",
-    url: "https://mnmlst.dev", //TBD
+    title: "Mnmlst — Frontend Engineer",
+    description:
+      "Frontend engineer building clean, fast, and intentional digital products.",
+    url: "https://mnmlst-dev.vercel.app",
     siteName: "Mnmlst",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Mnmlst — Frontend Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mnmlst — Frontend Engineer",
+    description:
+      "Frontend engineer building clean, fast, and intentional digital products.",
   },
 };
 

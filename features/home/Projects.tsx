@@ -47,22 +47,28 @@ const ProjectCard = ({ p }: { p: Project }) => (
 
       <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
 
-      <div className="absolute inset-0 z-10 flex flex-col md:flex-row md:items-end justify-between items-start gap-6 p-8 md:p-12 text-white">
-        <div className="space-y-3 max-w-2xl">
-          <h6 className="text-4xl md:text-5xl font-semibold tracking-tight drop-shadow-md">
-            {p.title}
-          </h6>
-          <p className="text-sm md:text-base font-light leading-relaxed text-zinc-300 drop-shadow-sm">
-            {p.brief}
-          </p>
-        </div>
+      <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 md:p-12 text-white">
+        <div className="flex flex-col md:flex-row md:items-end justify-between items-start gap-6 w-full">
+          <div className="space-y-3 max-w-2xl">
+            <h6 className="text-4xl md:text-5xl font-semibold tracking-tight drop-shadow-md">
+              {p.title}
+            </h6>
+            <p className="text-sm md:text-base font-light leading-relaxed text-zinc-300 drop-shadow-sm">
+              {p.brief}
+            </p>
+          </div>
 
-        <Link
-          href={`/work/${p.title.toLowerCase().replace(/\s+/g, "-")}`}
-          className="shrink-0 w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300 group-hover:rotate-45"
-        >
-          <ArrowUpRight className="size-6 text-white group-hover:text-black" />
-        </Link>
+          <div className="flex flex-wrap gap-2 md:justify-end shrink-0 max-w-full md:max-w-[45%]">
+            {p.tech.map((t) => (
+              <span
+                key={t}
+                className="text-[11px] font-mono tracking-wider text-zinc-300 bg-white/5 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full whitespace-nowrap capitalize shadow-xs transition-colors duration-300"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   </ScrollCardWrapper>

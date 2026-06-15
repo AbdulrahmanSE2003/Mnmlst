@@ -20,7 +20,7 @@ const formSchema = z.object({
   email: z.string().email("Invalid email address."),
   idea: z
     .string()
-    .min(10, "Please describe your idea more clearly. (10 characters min"),
+    .min(10, "Please describe your idea more clearly. (10 characters min)"),
 });
 
 type FormValues = z.infer<typeof formSchema>;

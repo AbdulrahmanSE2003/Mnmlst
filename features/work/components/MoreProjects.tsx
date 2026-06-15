@@ -35,7 +35,7 @@ export default function MoreProjects({
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className={`text-5xl font-plus-jakarta-sans font-semibold`}
+        className={`text-3xl sm:text-5xl font-plus-jakarta-sans font-semibold`}
       >
         More Projects
       </motion.h5>
