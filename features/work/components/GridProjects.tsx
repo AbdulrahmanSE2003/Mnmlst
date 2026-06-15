@@ -29,7 +29,7 @@ const GridProjects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-15%" }}
-          className="grid md:grid-cols-2 gap-x-10 gap-y-16"
+          className="grid md:grid-cols-2 gap-x-12 gap-y-16"
         >
           {pair.map((p) => (
             <ProjectCard key={p.title} p={p} />

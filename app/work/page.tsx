@@ -5,7 +5,7 @@ import Header from "@/features/work/components/Header";
 
 const WorkPage = () => {
   return (
-    <section className="py-24 container mx-auto px-14">
+    <section className="py-24 container mx-auto px-7 sm:px-14">
       {/* Header Container */}
       <Header />
 

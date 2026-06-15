@@ -15,6 +15,11 @@ import mongo from "@/public/images/mongo.png";
 import express from "@/public/images/express.png";
 import process1 from "@/public/images/process-1.jpg";
 import process2 from "@/public/images/process-2.webp";
+import bedrock from "@/public/images/projects/bedrock.png";
+import threads from "@/public/images/projects/threads.png";
+import miro from "@/public/images/projects/miro.png";
+import uniSolver from "@/public/images/projects/uni-solver.png";
+import gemini from "@/public/images/projects/gemini.png";
 
 // NOTE: Assets
 export {
@@ -210,8 +215,7 @@ export const projects = [
     tech: ["Next.js 16", "Supabase", "Shadcn", "Tailwind"],
     repo: "https://github.com/AbdulrahmanSE2003/Bedrock",
     demo: "https://bedrock-ysgz.vercel.app/",
-    image:
-      "https://res.cloudinary.com/dbusth6uc/image/upload/v1776639182/Screenshot_from_2026-04-20_00-42-35_ko5idd.png",
+    image: bedrock,
   },
   {
     title: "Threads-flow",
@@ -220,8 +224,7 @@ export const projects = [
     tech: ["Next.js 16", "Prisma", "Neon PostgreSQL", "Cloudinary"],
     repo: "https://github.com/AbdulrahmanSE2003/threads-flow",
     demo: "https://threads-flow.vercel.app/",
-    image:
-      "https://res.cloudinary.com/dbusth6uc/image/upload/v1776639184/Screenshot_from_2026-04-20_00-42-54_kdzdu9.png",
+    image: threads,
   },
   {
     title: "Uni-Solver",
@@ -230,8 +233,7 @@ export const projects = [
     tech: ["Next.js 16", "Tailwind", "Google Gemini API", "AI"],
     repo: "https://github.com/AbdulrahmanSE2003/uni-solver",
     demo: "https://uni-solver.vercel.app/",
-    image:
-      "https://res.cloudinary.com/dbusth6uc/image/upload/v1770802548/Screenshot_from_2026-02-11_11-35-07_qflxl2.png",
+    image: uniSolver,
   },
   {
     title: "Miro Clone",
@@ -240,8 +242,7 @@ export const projects = [
     tech: ["Next.js 16", "Clerk", "Liveblocks", "Convex"],
     repo: "https://github.com/AbdulrahmanSE2003/miro-clone",
     demo: "https://miro-clone-five.vercel.app/",
-    image:
-      "https://res.cloudinary.com/dbusth6uc/image/upload/v1776639182/Screenshot_from_2026-04-20_00-50-30_jotxp5.png",
+    image: miro,
   },
   {
     title: "Gemini Clone",
@@ -250,8 +251,7 @@ export const projects = [
     tech: ["TypeScript", "Next.js"],
     repo: "https://github.com/AbdulrahmanSE2003/gemini-clone",
     demo: "https://gemini-clone-eight-sooty.vercel.app/",
-    image:
-      "https://res.cloudinary.com/dbusth6uc/image/upload/v1776639181/Screenshot_from_2026-04-20_00-44-13_y5vw4k.png",
+    image: gemini,
   },
 ];
 
