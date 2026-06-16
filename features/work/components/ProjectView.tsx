@@ -65,7 +65,7 @@ const ProjectView = ({ project }: { project: (typeof projects)[0] }) => {
       {/* Header */}
       <motion.div
         variants={headerVariants}
-        className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-20 h-56"
+        className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-20 lg:h-56"
       >
         <div className="flex flex-col gap-6 max-w-lg justify-between h-full">
           <motion.h1
