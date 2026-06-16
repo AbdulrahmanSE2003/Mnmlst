@@ -27,7 +27,7 @@ export default function PageTransition({
         </motion.div>
       </AnimatePresence>
 
-      {/* BG overlay — بيداري أي flicker */}
+      {/* BG overlay — flicker */}
       <AnimatePresence>
         <motion.div
           key={`overlay-${pathname}`}
