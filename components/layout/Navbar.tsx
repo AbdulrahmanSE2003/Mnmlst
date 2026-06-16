@@ -50,7 +50,7 @@ export default function Navbar() {
             size={"icon-lg"}
             onClick={() => setOpen((p) => !p)}
             aria-label="Toggle menu"
-            className={`group`}
+            className={`group border border-foreground/20`}
           >
             <AnimatePresence mode="wait" initial={false}>
               {open ? (
