@@ -16,18 +16,18 @@ const StackSection = () => {
         {stack.map((item) => (
           <div
             key={item.name}
-            className={`grid grid-cols-5 gap-2 border-t border-foreground/8 last:border-b `}
+            className={`grid grid-cols-5 gap-0 sm:gap-2 border-t border-foreground/8 last:border-b `}
           >
             {/* Image */}
-            <div
-              className={`col-span-2 sm:col-span-1 relative overflow-hidden p-3 flex-center`}
-            >
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                className={`object-cover p-3 rounded-2xl`}
-              />
+            <div className="col-span-2 sm:col-span-1 flex items-center justify-center py-4">
+              <div className="relative w-18 h-18 shrink-0">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-contain rounded-xl border-2 border-border"
+                />
+              </div>
             </div>
             {/* Info */}
             <div className="col-span-3 sm:col-span-4 group flex items-start gap-6 py-5 cursor-default">
