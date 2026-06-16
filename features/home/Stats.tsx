@@ -35,7 +35,7 @@ const Stats = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-37.5 bg-foreground/10 blur-[100px] pointer-events-none rounded-full" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-8">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -47,7 +47,7 @@ const Stats = () => {
                 delay: i * 0.1,
                 ease: [0.215, 0.61, 0.355, 1],
               }}
-              className="flex flex-col gap-3 px-8 items-center first:pl-0 last:pr-0 border-r border-border last:border-r-0"
+              className="flex flex-col gap-3 px-8 items-center first:pl-0 last:pr-0 border-r border-border nth-[2]:max-sm:border-r-0 last:border-r-0"
             >
               <span className="text-6xl sm:text-7xl font-medium font-plus-jakarta-sans tracking-tight text-foreground leading-none">
                 {stat.value}
