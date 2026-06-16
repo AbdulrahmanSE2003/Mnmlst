@@ -10,6 +10,7 @@ const SocialLinks = () => {
           href={link.link}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`Visit my ${link.label} profile`}
           className={`w-10 h-10 flex-center border border-border/50 dark:border-border rounded-xl group hover:bg-white transition-colors duration-500`}
         >
           <span

@@ -19,7 +19,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      aria-label="Toggle theme"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       className="w-10 h-10 rounded-lg border border-foreground/20 flex items-center justify-center overflow-hidden relative hover:bg-foreground/5 transition-colors duration-500 cursor-pointer"
     >
       <AnimatePresence mode="wait" initial={false}>
@@ -31,7 +31,7 @@ export default function ThemeToggle() {
             exit={{ opacity: 0, scale: 0.5 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            <Moon size={18} strokeWidth={1.5} />
+            <Moon size={18} strokeWidth={1.5} aria-hidden="true" />
           </motion.span>
         ) : (
           <motion.span
@@ -41,7 +41,7 @@ export default function ThemeToggle() {
             exit={{ opacity: 0, scale: 0.5 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            <Sun size={18} strokeWidth={1.5} />
+            <Sun size={18} strokeWidth={1.5} aria-hidden="true" />
           </motion.span>
         )}
       </AnimatePresence>

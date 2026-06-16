@@ -55,6 +55,7 @@ export default function Navbar() {
             <AnimatePresence mode="wait" initial={false}>
               {open ? (
                 <ButtonIcon
+                  label="Close menu"
                   Icon={X}
                   key="x"
                   initial={{ opacity: 0, scale: 0.5 }}
@@ -64,6 +65,7 @@ export default function Navbar() {
                 />
               ) : (
                 <ButtonIcon
+                  label="Open menu"
                   Icon={Menu}
                   key="menu"
                   initial={{ opacity: 0, scale: 0.5 }}

@@ -80,7 +80,9 @@ export default function RootLayout({
         <ThemeProvider>
           <LenisProvider>
             <Navbar />
-            <PageTransition>{children}</PageTransition>
+            <PageTransition>
+              <main>{children}</main>
+            </PageTransition>
             <Footer />
           </LenisProvider>
         </ThemeProvider>

@@ -50,9 +50,9 @@ const ProjectCard = ({ p }: { p: Project }) => (
       <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 md:p-12 text-white">
         <div className="flex flex-col md:flex-row md:items-end justify-between items-start gap-6 w-full">
           <div className="space-y-3 max-w-2xl">
-            <h6 className="text-4xl md:text-5xl font-semibold tracking-tight drop-shadow-md">
+            <h5 className="text-4xl md:text-5xl font-semibold tracking-tight drop-shadow-md">
               {p.title}
-            </h6>
+            </h5>
             <p className="text-sm md:text-base font-light leading-relaxed text-zinc-300 drop-shadow-sm">
               {p.brief}
             </p>
