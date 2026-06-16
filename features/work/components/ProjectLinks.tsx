@@ -11,7 +11,7 @@ const ProjectLinks = ({ project }: { project: (typeof projects)[0] }) => {
           href={project.demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="group  font-medium px-5 py-5 rounded-lg hover:bg-foreground/90 transition-colors duration-300"
+          className="group font-medium px-5 py-5 rounded-lg hover:bg-foreground/90 transition-colors duration-500"
         >
           Live Demo
           <ArrowUpRight className="size-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

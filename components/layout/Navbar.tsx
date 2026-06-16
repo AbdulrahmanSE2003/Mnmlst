@@ -46,7 +46,7 @@ export default function Navbar() {
         <div className="flex md:hidden items-center gap-2">
           <ThemeToggle />
           <Button
-            variant={"secondary"}
+            variant={"primary"}
             size={"icon-lg"}
             onClick={() => setOpen((p) => !p)}
             aria-label="Toggle menu"
@@ -57,18 +57,18 @@ export default function Navbar() {
                 <ButtonIcon
                   Icon={X}
                   key="x"
-                  initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
-                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                  exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5 }}
                   transition={{ duration: 0.2, ease: "easeInOut" }}
                 />
               ) : (
                 <ButtonIcon
                   Icon={Menu}
                   key="menu"
-                  initial={{ opacity: 0, rotate: 90, scale: 0.5 }}
-                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                  exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5 }}
                   transition={{ duration: 0.2, ease: "easeInOut" }}
                 />
               )}

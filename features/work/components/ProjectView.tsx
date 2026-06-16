@@ -65,9 +65,9 @@ const ProjectView = ({ project }: { project: (typeof projects)[0] }) => {
       {/* Header */}
       <motion.div
         variants={headerVariants}
-        className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-20"
+        className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-20 h-56"
       >
-        <div className="flex flex-col gap-6 max-w-lg justify-between">
+        <div className="flex flex-col gap-6 max-w-lg justify-between h-full">
           <motion.h1
             variants={headerVariants}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold drop-shadow-muted drop-shadow-2xl font-plus-jakarta-sans tracking-tight leading-none"
@@ -80,7 +80,7 @@ const ProjectView = ({ project }: { project: (typeof projects)[0] }) => {
         </div>
 
         {/* Stats */}
-        <div className="w-full lg:w-2/5 flex flex-col justify-between gap-6 lg:gap-0">
+        <div className="w-full lg:w-2/5 flex flex-col justify-between gap-6 lg:gap-0 h-full">
           <div className="flex flex-col gap-0.5">
             <span className="text-muted-foreground/75 text-base">Category</span>
             <span className="text-lg">{project.brief}</span>
