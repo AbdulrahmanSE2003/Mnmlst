@@ -1,4 +1,3 @@
-// src/components/home/Testimonials.tsx
 "use client";
 
 import { motion } from "framer-motion";
