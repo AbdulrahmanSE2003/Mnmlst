@@ -47,7 +47,7 @@ const Hero = () => {
       <div className="flex flex-col items-center gap-2 relative z-10">
         <AutoSwitchTitle />
 
-        {["Software", "Engineer"].map((word, i) => (
+        {["Frontend", "Engineer"].map((word, i) => (
           <div key={i}>
             <motion.span
               variants={clipReveal}
