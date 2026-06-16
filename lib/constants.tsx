@@ -151,18 +151,18 @@ export const experiences = [
       "Coordinating program operations and bridging communication between teams to support the delivery of youth training and development initiatives.",
   },
   {
-    role: "Co-founder & Lead Frontend",
-    company: "Texon Startup",
-    duration: "Oct 2025 – Present · Part-time",
-    description:
-      "Architected the frontend with Next.js App Router and TypeScript. Built a reusable component library and led a 3-dev Agile team.",
-  },
-  {
     role: "Frontend Mentor",
     company: "GDG on Campus",
-    duration: "Jan 2025 – Apr 2025",
+    duration: "Dec 2025 – Apr 2025",
     description:
       "Mentoring 15+ students in React.js, state management, and responsive design.",
+  },
+  {
+    role: "Co-founder & Lead Frontend",
+    company: "Texon Startup",
+    duration: "Oct 2025 – May 2026 · Part-time",
+    description:
+      "Architected the frontend with Next.js App Router and TypeScript. Built a reusable component library and led a 3-dev Agile team.",
   },
 ];
 
@@ -264,14 +264,14 @@ export const projects = [
 export const testimonials = [
   {
     name: "Abdullah Fathallah",
-    role: "Backend Engineer",
+    role: "Software Engineer",
     quote:
       "A highly professional frontend engineer. His code is clean, production-ready, and meticulously polished.",
     initial: <Terminal className="size-18 stroke-[1.5px]  text-muted" />,
   },
   {
     name: "Mahmoud Harraz",
-    role: "CEO & Founder",
+    role: "CEO & Founder Edmen",
     company: "Edmen Co",
     quote:
       "He executed our product vision flawlessly and delivered ahead of schedule. Exceptional speed without sacrificing quality.",

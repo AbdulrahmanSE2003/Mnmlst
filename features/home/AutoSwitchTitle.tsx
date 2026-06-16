@@ -11,7 +11,7 @@ const AutoSwitchTitle = () => {
   ];
 
   const [index, setIndex] = useState(0);
-  const [isReady, setIsReady] = useState(false); // الحالة الجديدة للتحميل
+  const [isReady, setIsReady] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
@@ -19,7 +19,7 @@ const AutoSwitchTitle = () => {
     const handleLoad = () => {
       setTimeout(() => {
         setIsReady(true);
-      }, 2000);
+      }, 2500);
     };
 
     if (document.readyState === "complete") {
@@ -35,7 +35,7 @@ const AutoSwitchTitle = () => {
 
     const interval = setInterval(() => {
       setIndex((prev) => prev + 1);
-    }, 3500);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [index, titles.length, isInView, isReady]);
@@ -43,10 +43,10 @@ const AutoSwitchTitle = () => {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: -10 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{
         opacity: isReady && isInView ? 1 : 0,
-        y: isReady && isInView ? 0 : -10,
+        y: isReady && isInView ? 0 : 10,
       }}
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="text-xl font-medium text-foreground tracking-wider font-plus-jakarta-sans flex flex-col h-8 overflow-hidden w-auto px-2"
