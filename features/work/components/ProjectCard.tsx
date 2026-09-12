@@ -19,14 +19,18 @@ const ProjectCard = ({ p }: { p: (typeof projects)[0] }) => (
   <Link href={`/work/${toSlug(p.title)}`}>
     <motion.div variants={cardVariants} className="group flex flex-col gap-4">
       <div className="relative h-96 rounded-2xl overflow-hidden bg-muted">
-        {p.image ?<Image
-          src={p.image}
-          alt={p.title}
-          fill
-          loading="lazy"
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
-        /> : <div className="h-full transition-transform duration-700 ease-out group-hover:scale-103">{p.component}</div>}
+        {p.image ? (
+          <Image
+            src={p.image}
+            alt={p.title}
+            fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+          />
+        ) : (
+          p.component
+        )}
         <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/2 transition-colors duration-500 rounded-2xl" />
       </div>
       <div className="flex items-start justify-between gap-4 px-1">

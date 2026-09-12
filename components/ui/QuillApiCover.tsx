@@ -62,7 +62,7 @@ export default function QuillApiCover() {
   const current = routes[active];
 
   return (
-    <div className="group relative aspect-video w-full h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-[#090909] font-mono text-white shadow-2xl">
+    <div className="group group-hover:scale-103 transition-transform duration-700 ease-out relative aspect-video w-full h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-[#090909] font-mono text-white shadow-2xl">
       {/* Ambient light */}
       <div className="pointer-events-none absolute -left-32 -top-32 h-72 w-72 rounded-full bg-amber-500/[0.025] blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-72 w-72 rounded-full bg-blue-500/[0.025] blur-3xl" />
@@ -96,9 +96,7 @@ export default function QuillApiCover() {
 
               <span className="h-px w-8 bg-white/10" />
 
-              <span className="text-[9px] text-white/20">
-                v1
-              </span>
+              <span className="text-[9px] text-white/20">v1</span>
             </div>
 
             <div className="flex items-center gap-3">
@@ -127,10 +125,7 @@ export default function QuillApiCover() {
               ["03", "CHUNKS", "indexed"],
               ["04", "PROGRESS", "tracked"],
             ].map(([number, name, state], index) => (
-              <div
-                key={name}
-                className="flex items-center gap-3 text-[8px]"
-              >
+              <div key={name} className="flex items-center gap-3 text-[8px]">
                 <span className="text-white/15">{number}</span>
 
                 <span
@@ -141,13 +136,9 @@ export default function QuillApiCover() {
                   }`}
                 />
 
-                <span className="w-14 text-white/40">
-                  {name}
-                </span>
+                <span className="w-14 text-white/40">{name}</span>
 
-                <span className="text-white/15">
-                  {state}
-                </span>
+                <span className="text-white/15">{state}</span>
               </div>
             ))}
           </div>
@@ -155,13 +146,9 @@ export default function QuillApiCover() {
           {/* Book progress */}
           <div className="mt-6">
             <div className="mb-2 flex items-center justify-between text-[8px]">
-              <span className="text-white/25">
-                reading progress
-              </span>
+              <span className="text-white/25">reading progress</span>
 
-              <span className="text-white/40">
-                {progress}%
-              </span>
+              <span className="text-white/40">{progress}%</span>
             </div>
 
             <div className="h-1 overflow-hidden rounded-full bg-white/[0.06]">
@@ -200,9 +187,7 @@ export default function QuillApiCover() {
                 Live requests
               </p>
 
-              <p className="mt-1 text-[8px] text-white/15">
-                reading activity
-              </p>
+              <p className="mt-1 text-[8px] text-white/15">reading activity</p>
             </div>
 
             <span className="rounded border border-white/[0.07] px-2 py-1 text-[8px] text-white/20">
@@ -237,9 +222,7 @@ export default function QuillApiCover() {
 
                     <span
                       className={`flex-1 truncate text-[9px] ${
-                        isActive
-                          ? "text-white/65"
-                          : "text-white/30"
+                        isActive ? "text-white/65" : "text-white/30"
                       }`}
                     >
                       /api/v1{route.path}
@@ -283,71 +266,47 @@ export default function QuillApiCover() {
             </div>
 
             <div className="space-y-1 text-[8px]">
-              <div className="text-white/20">
-                {"{"}
+              <div className="text-white/20">{"{"}</div>
+
+              <div className="pl-3">
+                <span className="text-blue-300/50">"book"</span>
+
+                <span className="text-white/15">: </span>
+
+                <span className="text-green-300/50">"The Alchemist"</span>
               </div>
 
               <div className="pl-3">
-                <span className="text-blue-300/50">
-                  "book"
-                </span>
+                <span className="text-blue-300/50">"chunk"</span>
 
-                <span className="text-white/15">
-                  :{" "}
-                </span>
+                <span className="text-white/15">: </span>
 
-                <span className="text-green-300/50">
-                  "The Alchemist"
-                </span>
+                <span className="text-yellow-300/50">12</span>
               </div>
 
               <div className="pl-3">
-                <span className="text-blue-300/50">
-                  "chunk"
-                </span>
+                <span className="text-blue-300/50">"progress"</span>
 
-                <span className="text-white/15">
-                  :{" "}
-                </span>
+                <span className="text-white/15">: </span>
 
-                <span className="text-yellow-300/50">
-                  12
-                </span>
+                <span className="text-yellow-300/50">{progress}</span>
               </div>
 
-              <div className="pl-3">
-                <span className="text-blue-300/50">
-                  "progress"
-                </span>
-
-                <span className="text-white/15">
-                  :{" "}
-                </span>
-
-                <span className="text-yellow-300/50">
-                  {progress}
-                </span>
-              </div>
-
-              <div className="text-white/20">
-                {"}"}
-              </div>
+              <div className="text-white/20">{"}"}</div>
             </div>
           </div>
 
           {/* Services */}
           <div className="mt-3 flex items-center gap-4 border-t border-white/[0.06] pt-3">
-            {["MongoDB", "Cloudinary", "JWT", "OAuth"].map(
-              (service) => (
-                <div
-                  key={service}
-                  className="flex items-center gap-1.5 text-[7px] text-white/20"
-                >
-                  <span className="h-1 w-1 rounded-full bg-green-400/60" />
-                  {service}
-                </div>
-              ),
-            )}
+            {["MongoDB", "Cloudinary", "JWT", "OAuth"].map((service) => (
+              <div
+                key={service}
+                className="flex items-center gap-1.5 text-[7px] text-white/20"
+              >
+                <span className="h-1 w-1 rounded-full bg-green-400/60" />
+                {service}
+              </div>
+            ))}
           </div>
         </div>
       </div>

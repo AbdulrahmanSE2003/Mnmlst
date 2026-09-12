@@ -59,7 +59,7 @@ export default function UniCollegeCover() {
   const current = requests[active];
 
   return (
-    <div className="group relative aspect-video w-ful h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-[#080808] font-mono text-white shadow-2xl">
+    <div className="group group-hover:scale-103 transition-transform duration-700 ease-out relative aspect-video w-full h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-[#080808] font-mono text-white shadow-2xl">
       {/* Ambient glow */}
       <div className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-green-500/[0.025] blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-blue-500/[0.025] blur-3xl" />
@@ -94,9 +94,7 @@ export default function UniCollegeCover() {
 
               <span className="h-px w-8 bg-white/10" />
 
-              <span className="text-[9px] text-white/20">
-                v1
-              </span>
+              <span className="text-[9px] text-white/20">v1</span>
             </div>
 
             <h1 className="text-3xl font-semibold tracking-[-0.04em] text-white/90">
@@ -184,18 +182,14 @@ export default function UniCollegeCover() {
 
                   <div className="flex items-center gap-3">
                     <span
-                      className={`w-11 text-[8px] font-bold ${
-                        request.color
-                      }`}
+                      className={`w-11 text-[8px] font-bold ${request.color}`}
                     >
                       {request.method}
                     </span>
 
                     <span
                       className={`flex-1 truncate text-[9px] transition-colors ${
-                        isActive
-                          ? "text-white/65"
-                          : "text-white/30"
+                        isActive ? "text-white/65" : "text-white/30"
                       }`}
                     >
                       /api/v1{request.path}
@@ -203,9 +197,7 @@ export default function UniCollegeCover() {
 
                     <span
                       className={`text-[8px] ${
-                        isActive
-                          ? "text-green-400/80"
-                          : "text-white/20"
+                        isActive ? "text-green-400/80" : "text-white/20"
                       }`}
                     >
                       {request.status}
@@ -256,18 +248,14 @@ export default function UniCollegeCover() {
               <p className="pl-3">
                 <span className="text-blue-300/50">"service"</span>
                 <span className="text-white/20">: </span>
-                <span className="text-green-300/50">
-                  "{current.service}"
-                </span>
+                <span className="text-green-300/50">"{current.service}"</span>
                 <span className="text-white/20">,</span>
               </p>
 
               <p className="pl-3">
                 <span className="text-blue-300/50">"status"</span>
                 <span className="text-white/20">: </span>
-                <span className="text-green-300/50">
-                  "success"
-                </span>
+                <span className="text-green-300/50">"success"</span>
               </p>
 
               <p>
@@ -278,17 +266,15 @@ export default function UniCollegeCover() {
 
           {/* Infrastructure */}
           <div className="mt-3 flex items-center gap-4 border-t border-white/[0.06] pt-3">
-            {["MongoDB", "JWT", "Inngest", "Gemini"].map(
-              (service) => (
-                <div
-                  key={service}
-                  className="flex items-center gap-1.5 text-[7px] text-white/20"
-                >
-                  <span className="h-1 w-1 rounded-full bg-green-400/60" />
-                  {service}
-                </div>
-              ),
-            )}
+            {["MongoDB", "JWT", "Inngest", "Gemini"].map((service) => (
+              <div
+                key={service}
+                className="flex items-center gap-1.5 text-[7px] text-white/20"
+              >
+                <span className="h-1 w-1 rounded-full bg-green-400/60" />
+                {service}
+              </div>
+            ))}
           </div>
         </div>
       </div>
