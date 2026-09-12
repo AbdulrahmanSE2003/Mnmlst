@@ -13,7 +13,7 @@ const ProcessSection = () => {
       </p>
 
       {/* Grid with explicit rows and gaps */}
-      <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[250px] gap-4 shadow-xl shadow-glow">
+      <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[250px] gap-4 shadow-xl">
         {steps.map((step, i) => (
           <div
             key={i}
