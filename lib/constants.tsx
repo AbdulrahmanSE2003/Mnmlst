@@ -6,21 +6,26 @@ import about1 from "@/public/images/about-1.jpg";
 import about2 from "@/public/images/about-2.webp";
 import about3 from "@/public/images/about-3.webp";
 import about4 from "@/public/images/about-4.webp";
-import figma from "@/public/images/stack/figma.webp";
-import framer from "@/public/images/stack/framer.webp";
 import typescript from "@/public/images/stack/typescript.webp";
 import next from "@/public/images/stack/next.webp";
 import tailwind from "@/public/images/stack/tailwind.png";
 import mongo from "@/public/images/stack/mongo.png";
-import express from "@/public/images/stack/express.png";
+import nest from "@/public/images/stack/nest.png";
+import docker from "@/public/images/stack/docker.png";
+import git from "@/public/images/stack/git.png";
+import socket from "@/public/images/stack/socket.png";
+import postgres from "@/public/images/stack/postgres.png";
 import process1 from "@/public/images/process-1.jpg";
 import process2 from "@/public/images/process-2.webp";
 import bedrock from "@/public/images/projects/bedrock.png";
 import threads from "@/public/images/projects/threads.png";
+import elLe3ba from "@/public/images/projects/el-le3ba.png";
 import miro from "@/public/images/projects/miro.png";
 import uniSolver from "@/public/images/projects/uni-solver.png";
 import gemini from "@/public/images/projects/gemini.png";
 import { Flame, Layers, Sparkles, Terminal } from "lucide-react";
+import UniCollegeCover from "@/components/ui/UniCollegeCover";
+import QuillApiCover from "@/components/ui/QuillApiCover";
 
 // NOTE: Assets
 export {
@@ -31,13 +36,14 @@ export {
   about2,
   about3,
   about4,
-  figma,
-  framer,
   typescript,
   next,
   tailwind,
   mongo,
-  express,
+  nest,
+  docker,
+  git,
+  socket,
   process1,
   process2,
 };
@@ -102,43 +108,55 @@ export const stack = [
     image: next,
     name: "Next.js",
     description:
-      "My primary framework for building fast, production-ready web apps — SSR, App Router, and seamless full-stack integration.",
+      "My primary framework for building production-ready web apps — App Router, server rendering, and full-stack integration.",
   },
   {
     image: typescript,
     name: "TypeScript",
     description:
-      "How I write JavaScript — typed, predictable, and easier to scale across any codebase.",
+      "How I write JavaScript — typed, predictable, and easier to scale across the entire stack.",
   },
   {
-    image: express,
-    name: "Node.js & Express",
+    image: nest,
+    name: "Node.js · NestJS · Express",
     description:
-      "My backend foundation — building REST APIs, handling auth, and connecting everything to the database layer.",
+      "My backend stack for building REST APIs, authentication systems, business logic, and production services.",
+  },
+  {
+    image: postgres,
+    name: "PostgreSQL · Prisma",
+    description:
+      "My relational stack for structured data, strong relationships, migrations, and type-safe database access.",
   },
   {
     image: mongo,
-    name: "MongoDB",
+    name: "MongoDB · Mongoose",
     description:
-      "My database of choice for flexible, document-based data modeling with Mongoose on top.",
+      "My document database stack for flexible schemas and fast iteration when relational structure isn't the right fit.",
+  },
+  {
+    image: socket,
+    name: "Socket.IO",
+    description:
+      "For real-time systems — live multiplayer state, events, notifications, and synchronized client experiences.",
+  },
+  {
+    image: docker,
+    name: "Docker",
+    description:
+      "For reproducible environments, containerized services, and keeping development closer to production.",
+  },
+  {
+    image: git,
+    name: "Git · Github",
+    description:
+      "My everyday tool for version control, branching, collaboration, and keeping projects recoverable.",
   },
   {
     image: tailwind,
     name: "Tailwind CSS",
     description:
-      "My go-to for styling — utility-first, consistent, and pairs perfectly with component-driven architecture.",
-  },
-  {
-    image: figma,
-    name: "Figma",
-    description:
-      "Where I think before I build — wireframing, prototyping, and aligning design decisions before touching code.",
-  },
-  {
-    image: framer,
-    name: "Framer Motion",
-    description:
-      "Where interactions come alive — smooth animations and micro-interactions that make interfaces feel intentional.",
+      "My go-to styling system for building consistent interfaces without fighting a giant stylesheet.",
   },
 ];
 
@@ -210,14 +228,38 @@ export const steps = [
 
 export const projects = [
   {
-    title: "Bedrock",
-    brief: "Productivity SaaS App",
+    title: "El-Le3ba",
+    brief: "Competitive University Quiz App",
     description:
-      "A minimalist yet powerful productivity app built around Kanban boards, habit tracking, and Google Tasks sync. Designed with a focus on clarity and speed — no clutter, just the tools you need to stay on track. Features real-time data sync via Supabase and a clean auth flow.",
-    tech: ["Next.js 16", "Supabase", "Shadcn", "Tailwind"],
-    repo: "https://github.com/AbdulrahmanSE2003/Bedrock",
-    demo: "https://bedrock-ysgz.vercel.app/",
-    image: bedrock,
+      "A competitive trivia application for Borg El-Arab Technological University (BATU) students. Features real-time ranked multiplayer trivia matches via Socket.IO, event-based season cycles, live leaderboards, and dual-layer Admin / Super-Admin management dashboards.",
+    tech: [
+      "Next.js 16",
+      "Express 5",
+      "TypeScript",
+      "MongoDB",
+      "Socket.IO",
+      "Tailwind",
+      "Shadcn",
+    ],
+    repo: "https://github.com/AbdulrahmanSE2003/el-le3ba",
+    demo: "https://el-le3ba.vercel.app/",
+    image: elLe3ba,
+  },
+  {
+    title: "Uni-College Backend",
+    brief: "AI-Powered LMS API",
+    description:
+      "An AI-powered Learning Management System API supporting role-based workflows for Admins, Teachers, and Students. Features Google Gemini integration for automated MCQ exam and collision-free timetable generation, alongside Inngest for asynchronous quiz auto-grading, GPA calculation, and email notifications.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "MongoDB",
+      "Google Gemini API",
+      "Inngest",
+    ],
+    repo: "https://github.com/AbdulrahmanSE2003/uni-college-api",
+    component: <UniCollegeCover />,
   },
   {
     title: "Threads-flow",
@@ -230,6 +272,15 @@ export const projects = [
     image: threads,
   },
   {
+    title: "Quill API",
+    brief: "Book Reading & Tracking API",
+    description:
+      "A feature-complete RESTful API for book reading and tracking applications. Supports chunk-based PDF reading with automatic text extraction, reading progress and session logging, streak tracking, quotes, bookmarks, and full OAuth 2.0 / JWT auth flows.",
+    tech: ["Node.js", "Express 5", "TypeScript", "MongoDB", "Cloudinary"],
+    repo: "https://github.com/AbdulrahmanSE2003/quill-api",
+    component: <QuillApiCover />,
+  },
+  {
     title: "Uni-Solver",
     brief: "AI-Powered Educational Tool",
     description:
@@ -238,6 +289,16 @@ export const projects = [
     repo: "https://github.com/AbdulrahmanSE2003/uni-solver",
     demo: "https://uni-solver.vercel.app/",
     image: uniSolver,
+  },
+  {
+    title: "Bedrock",
+    brief: "Productivity SaaS App",
+    description:
+      "A minimalist yet powerful productivity app built around Kanban boards, habit tracking, and Google Tasks sync. Designed with a focus on clarity and speed — no clutter, just the tools you need to stay on track. Features real-time data sync via Supabase and a clean auth flow.",
+    tech: ["Next.js 16", "Supabase", "Shadcn", "Tailwind"],
+    repo: "https://github.com/AbdulrahmanSE2003/Bedrock",
+    demo: "https://bedrock-ysgz.vercel.app/",
+    image: bedrock,
   },
   {
     title: "Miro-Clone",

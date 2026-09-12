@@ -96,14 +96,16 @@ const ProjectView = ({ project }: { project: (typeof projects)[0] }) => {
         variants={imageVariants}
         className="relative w-full h-[50vh] sm:h-[70vh] lg:h-[90vh] rounded-3xl overflow-hidden mb-20 sm:mb-32 bg-muted shadow-2xl"
       >
-        <Image
+        {project.image ?<Image
           src={project.image}
           alt={project.title}
           fill
           priority
           sizes="100vw"
           className="object-cover"
-        />
+        /> : <div>
+          {project.component}
+          </div>}
       </motion.div>
 
       {/* More Projects Section */}

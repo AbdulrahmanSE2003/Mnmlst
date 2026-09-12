@@ -7,7 +7,7 @@ const ProjectLinks = ({ project }: { project: (typeof projects)[0] }) => {
   return (
     <div className="flex items-center gap-4 pt-2">
       <Button size={"lg"} asChild>
-        <Link
+        {project.demo &&<Link
           href={project.demo}
           target="_blank"
           rel="noopener noreferrer"
@@ -15,10 +15,10 @@ const ProjectLinks = ({ project }: { project: (typeof projects)[0] }) => {
         >
           Live Demo
           <ArrowUpRight className="size-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </Link>
+        </Link>}
       </Button>
 
-      <Button variant={"outline"} asChild>
+      <Button variant={"secondary"} asChild>
         <Link
           href={project.repo}
           target="_blank"

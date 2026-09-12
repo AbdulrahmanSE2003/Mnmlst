@@ -36,14 +36,14 @@ const ScrollCardWrapper = ({ children }: { children: React.ReactNode }) => {
 const ProjectCard = ({ p }: { p: Project }) => (
   <ScrollCardWrapper>
     <div className="relative h-[65vh] md:h-[90vh] w-full rounded-4xl overflow-hidden shadow-2xl group border border-zinc-800">
-      <Image
+      {p.image ?<Image
         src={p.image}
         alt={p.title}
         fill
         priority
         sizes="100vw"
         className="object-cover transition-transform duration-1000 ease-out group-hover:scale-103"
-      />
+      /> : p.component}
 
       <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/40 to-transparent pointer-events-none" />
 
