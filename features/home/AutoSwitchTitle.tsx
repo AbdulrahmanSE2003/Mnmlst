@@ -54,7 +54,7 @@ const AutoSwitchTitle = () => {
       <motion.div
         animate={{ y: -(index * 32) }}
         transition={{ duration: 0.8, ease: [0.25, 1, 0.3, 1] }}
-        className="flex flex-col"
+        className="flex flex-col items-center"
       >
         {titles.map((title, i) => (
           <span key={i} className="h-8 flex items-center shrink-0">

@@ -37,7 +37,7 @@ const letterVariants: Variants = {
 
 const Header = () => {
   const paragraphText =
-    "A showcase of my latest projects — thoughtful design, clear strategy, and impactful results.";
+    "A collection of projects built with purpose — clean architecture, intentional design, and a relentless focus on shipping things that work.";
 
   return (
     <div className="space-y-3 my-16">

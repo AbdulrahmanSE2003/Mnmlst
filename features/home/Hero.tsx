@@ -71,7 +71,7 @@ const Hero = () => {
         variants={fadeUp}
         className="absolute uppercase text-md font-mono text-muted-foreground bottom-6 right-6 z-10"
       >
-        Building since 2023
+        Shipping since 2023
       </motion.span>
 
       {/* Floating icons */}
