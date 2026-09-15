@@ -123,16 +123,16 @@ export const stack = [
       "My backend stack for building REST APIs, authentication systems, business logic, and production services.",
   },
   {
-    image: postgres,
-    name: "PostgreSQL · Prisma",
-    description:
-      "My relational stack for structured data, strong relationships, migrations, and type-safe database access.",
-  },
-  {
     image: mongo,
     name: "MongoDB · Mongoose",
     description:
       "My document database stack for flexible schemas and fast iteration when relational structure isn't the right fit.",
+  },
+  {
+    image: postgres,
+    name: "PostgreSQL · Prisma",
+    description:
+      "My relational stack for structured data, strong relationships, migrations, and type-safe database access.",
   },
   {
     image: socket,
